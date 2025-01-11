@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% block title %} Predict{% endblock title %}
+{% block body %}
+
+<!-- About Start -->
+
+<div class="container-xxl py-4" style="background-color: #cde8ff;">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <form action="/predict" method="POST">
+                    <div class="bg-light rounded h-100 d-flex pt-4">
+                        <div class="container">
+                            <div class="row">
+                                <h4 class="mb-2 text-primary">Disease Prediction Checker:</h4>
+                                <hr class="p-0">
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12">
+                                    <h5 class="mb-1">Symptom1</h5>
+                                    <select class="form-select border-1 mb-2 text-dark" id="ddlsymtom1"
+                                        name="ddlsymtom1">
+                                        <option selected>Choose Symptom1</option>
+
+                                        <option value="Itching" {% if s1=="Itching" %}selected{% endif %}>
+                                            Itching</option>
+                                        <option value="Skin Rash" {% if s1=="Skin Rash" %}selected{% endif %}>Skin Rash
+                                        </option>
+                                        <option value="Nodal Skin Eruptions" {% if s1=="Nodal Skin Eruptions"
+                                            %}selected{% endif %}>Nodal Skin
+                                            Eruptions</option>
+                                        <option value="Continuous Sneezing" {% if s1=="Continuous Sneezing" %}selected{%
+                                            endif %}>Continuous
+                                            Sneezing</option>
+                                        <option value="Shivering" {% if s1=="Shivering" %}selected{% endif %}>Shivering
+                                        </option>
+                                        <option value="Chills" {% if s1=="Chills" %}selected{% endif %}>
+                                            Chills</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12">
+                                    <h5 class="mb-1" style="font-weight: 500;">Symptom2</h5>
+                                    <select class="form-select border-1 mb-2" id="ddlsymtom2" name="ddlsymtom2">
+                                        <option selected>Choose Symptom2</option>
+                                        <option value="Itching" {% if s2=="Itching" %}selected{% endif %}>
+                                            Itching</option>
+                                        <option value="Skin Rash" {% if s2=="Skin Rash" %}selected{% endif %}>Skin Rash
+                                        </option>
+                                        <option value="Nodal Skin Eruptions" {% if s2=="Nodal Skin Eruptions"
+                                            %}selected{% endif %}>Nodal Skin
+                                            Eruptions</option>
+                                        <option value="Continuous Sneezing" {% if s2=="Continuous Sneezing" %}selected{%
+                                            endif %}>Continuous
+                                            Sneezing</option>
+                                        <option value="Shivering" {% if s2=="Shivering" %}selected{% endif %}>Shivering
+                                        </option>
+                                        <option value="Chills" {% if s2=="Chills" %}selected{% endif %}>
+                                            Chills</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12">
+                                    <h5 class="mb-1" style="font-weight: 500;">Symptom3</h5>
+                                    <select class="form-select border-1 mb-2" name="ddlsymtom3">
+                                        <option selected>Choose Symptom3</option>
+                                        <option value="Itching" {% if s3=="Itching" %}selected{% endif %}>
+                                            Itching</option>
+                                        <option value="Skin Rash" {% if s3=="Skin Rash" %}selected{% endif %}>Skin Rash
+                                        </option>
+                                        <option value="Nodal Skin Eruptions" {% if s3=="Nodal Skin Eruptions"
+                                            %}selected{% endif %}>Nodal Skin
+                                            Eruptions</option>
+                                        <option value="Continuous Sneezing" {% if s3=="Continuous Sneezing" %}selected{%
+                                            endif %}>Continuous
+                                            Sneezing</option>
+                                        <option value="Shivering" {% if s3=="Shivering" %}selected{% endif %}>Shivering
+                                        </option>
+                                        <option value="Chills" {% if s3=="Chills" %}selected{% endif %}>
+                                            Chills</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12">
+                                    <h5 class="mb-1" style="font-weight: 500;">Symptom4</h5>
+                                    <select class="form-select border-1 mb-2" name="ddlsymtom4">
+                                        <option selected>Choose Symptom4</option>
+                                        <option value="Itching" {% if s4=="Itching" %}selected{% endif %}>
+                                            Itching</option>
+                                        <option value="Skin Rash" {% if s4=="Skin Rash" %}selected{% endif %}>Skin Rash
+                                        </option>
+                                        <option value="Nodal Skin Eruptions" {% if s4=="Nodal Skin Eruptions"
+                                            %}selected{% endif %}>Nodal Skin
+                                            Eruptions</option>
+                                        <option value="Continuous Sneezing" {% if s4=="Continuous Sneezing" %}selected{%
+                                            endif %}>Continuous
+                                            Sneezing</option>
+                                        <option value="Shivering" {% if s4=="Shivering" %}selected{% endif %}>Shivering
+                                        </option>
+                                        <option value="Chills" {% if s4=="Chills" %}selected{% endif %}>
+                                            Chills</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12">
+                                    <h5 class="mb-1" style="font-weight: 500;">Symptom5</h5>
+                                    <select class="form-select border-1" name="ddlsymtom5">
+                                        <option selected>Choose Symptom5</option>
+                                        <option value="Itching" {% if s5=="Itching" %}selected{% endif %}>
+                                            Itching</option>
+                                        <option value="Skin Rash" {% if s5=="Skin Rash" %}selected{% endif %}>Skin Rash
+                                        </option>
+                                        <option value="Nodal Skin Eruptions" {% if s5=="Nodal Skin Eruptions"
+                                            %}selected{% endif %}>Nodal Skin
+                                            Eruptions</option>
+                                        <option value="Continuous Sneezing" {% if s5=="Continuous Sneezing" %}selected{%
+                                            endif %}>Continuous
+                                            Sneezing</option>
+                                        <option value="Shivering" {% if s5=="Shivering" %}selected{% endif %}>Shivering
+                                        </option>
+                                        <option value="Chills" {% if s5=="Chills" %}selected{% endif %}>
+                                            Chills</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row text-center justify-content-center">
+                                <div class="col-12 col-sm-12 py-3">
+                                    <button type="submit"
+                                        class="btn btn-primary btn-lg w-100 mt-3 rounded-pill">Prediction</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="bg-light rounded h-100 d-flex pt-4">
+                    <div class="container">
+                        <div class="row">
+                            <h4 class="mb-2 text-primary">Disease Prediction Result:</h4>
+                            <hr class="p-0">
+                        </div>
+                        <div class="row">
+                            <p style="font-size: 25px;color: black;font-weight: 500;">There are chances you may have</p>
+                            <h4 class="text-danger">
+                                {% if final_prediction %} {{ final_prediction }} {% else %} Result is not ready. {% endif %}
+                            </h4>
+                            <p style="font-size: 25px;color: black;font-weight: 500;">Consult a doctor for the
+                                treatment.</p>
+                        </div>
+                        <div class="row text-center justify-content-center">
+                            <div class="col-12 col-sm-12 py-3">
+                                <button type="button" class="btn btn-primary btn-lg w-100 mt-3 rounded-pill">Book
+                                    Appointment</button>
+                            </div>
+                            <div class="row text-start">
+                                <table class="table table-bordered text-dark">
+                                    <tr style="background-color: #c7e9fd;">
+                                        <th>Sr</th>
+                                        <th>Algorithms</th>
+                                        <th>Result</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Random Forest Prediction</td>
+                                        <td> {% if rf_prediction %} {{ rf_prediction }} {% else %} Result is not ready. {% endif %}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Naive Bayes Prediction</td>
+                                        <td> {% if nb_prediction %} {{ nb_prediction }} {% else %} Result is not ready. {% endif %}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>SVM Prediction</td>
+                                        <td> {% if svm_prediction %} {{ svm_prediction }} {% else %} Result is not ready. {% endif %}</td>
+                                    </tr>
+                                    <tr style="background-color: #c7e9fd;font-weight: 500;">
+                                        <td class="text-center" colspan="2">Final Prediction</td>
+                                        <td> {% if final_prediction %} {{ final_prediction }} {% else %} Result is not ready. {% endif %}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+{% if final_prediction %}
+<div class="row text-center">
+    <p class="text-dark mt-3">Our Prediction is:- <b class="text-danger"> {{ final_prediction }} </b></p>
+</div>
+
+{% endif %}
+{% endblock body %}
