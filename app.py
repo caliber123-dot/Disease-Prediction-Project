@@ -9,7 +9,7 @@ from flask import Flask, render_template, request, redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from waitress import serve
-
+# import requests
 
 app = Flask(__name__)
 
@@ -21,8 +21,8 @@ app.app_context().push()
 class reg_tbl(db.Model):
     rg_id = db.Column(db.Integer, primary_key=True)
     rg_name = db.Column(db.String(100), nullable=False) # Cannot be NULL
-    rg_phone = db.Column(db.String(50), nullable=False)
     rg_email = db.Column(db.String(100), nullable=False)
+    rg_phone = db.Column(db.String(50), nullable=False)
     rg_psw = db.Column(db.String(50), nullable=False)
     rg_date = db.Column(db.DateTime, default=datetime.utcnow)
     rg_status = db.Column(db.Integer, nullable=False)
@@ -30,7 +30,6 @@ class reg_tbl(db.Model):
     def __repr__(self) -> str:
         return f"{self.rg_id} - {self.rg_name}"
     
-
 # @app.route('/')
 # def start():
 #     return '<h1>This is Home Page 1</h1>'
@@ -40,6 +39,25 @@ def index():
     # all_data = Register.query.all()
     # print(all_data)
    return render_template('index.html')
+
+@app.route('/sign_in')
+def sign_in():
+   return render_template('sign_in.html')
+
+@app.route('/sign_up', methods=['GET', 'POST'])
+def sign_up():
+   if request.method=='POST':
+       txtname = request.form.get('txtname')
+       txtemail = request.form.get('txtemail')
+       txtphone = request.form.get('txtphone')
+       txtpsw = request.form.get('txtpsw')
+       txtcpsw = request.form.get('txtcpsw')
+       tosave = reg_tbl(rg_name=txtname, rg_email=txtemail, rg_phone = txtphone, rg_psw = txtpsw, rg_status = 1) # Add data
+       db.session.add(tosave)
+       db.session.commit()
+       myMsg = "Record saved successfully."
+       return render_template('sign_up.html', msg = myMsg)
+   return render_template('sign_up.html')
 
 from model_optimize import predictDisease
 @app.route('/predict', methods=['GET', 'POST'])
@@ -86,11 +104,8 @@ def predict():
         return render_template('predict.html',**symptoms,**prediction)
     return render_template('predict.html')
 
-
-
 if __name__ == "__main__":
     # db.create_all() 
     # app.debug = True
     # app.run(host="0.0.0.0", port=8000)
-    # pip install waitress
     serve(app, host="0.0.0.0", port=8000, threads=8)
