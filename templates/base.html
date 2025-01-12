@@ -34,6 +34,12 @@
 
     <!-- Template Stylesheet -->
     <link href="static/css/style.css" rel="stylesheet">
+    <style>
+        .success { color: green; }
+        .error { color: red; }
+        .info { color: blue; }
+        .warning { color: orange; }
+    </style>
 </head>
 
 <body>
@@ -96,7 +102,7 @@
                     </div>
                 </div> -->
                
-                <a href="service.html" class="nav-item nav-link">Prediction History</a>
+                <a href="/history" class="nav-item nav-link">Prediction History</a>
             </div>
             <a href="/predict" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Prediction
                 <i class="fa fa-arrow-right ms-3"></i></a>
@@ -149,8 +155,8 @@
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <a href="/logout"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Logout</a>
                     </div>
                 </div>
             </div>

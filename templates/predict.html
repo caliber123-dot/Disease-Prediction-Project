@@ -194,10 +194,22 @@
 </div>
 <!-- About End -->
 
-{% if final_prediction %}
-<div class="row text-center"  style="display: none;">
-    <p class="text-dark mt-3">Our Prediction is:- <b class="text-danger"> {{ final_prediction }} </b></p>
+<!-- {% if username %}
+<div class="row text-center"  style="display: block;">
+    <p class="text-dark mt-3">Hello, <b class="text-danger"> {{ username }} </b></p>
 </div>
+{% endif %} -->
+<div class="container text-center" >
+    <!-- <p> Logged out successfully. </p> -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+
+    {% for category, message in messages %}
+    <p class="{{ category }}">{{ message }}</p>
+    {% endfor %}
+
 {% endif %}
+{% endwith %}
+</div>
 
 {% endblock body %}

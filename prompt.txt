@@ -1,0 +1,6 @@
+Optimize my code : 
+Following code response is slow then optimize this code is # 
+In this code redirect to sign_up.html then jinja2 code to hold input value if existing_record
+jinja2 to login and save credentials in flask framework
+app.secret_key = 'your_secret_key' means what
+users = {} whats to get database values username and password
