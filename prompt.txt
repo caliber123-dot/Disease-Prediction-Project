@@ -4,3 +4,11 @@ In this code redirect to sign_up.html then jinja2 code to hold input value if ex
 jinja2 to login and save credentials in flask framework
 app.secret_key = 'your_secret_key' means what
 users = {} whats to get database values username and password
+show date and time for Asia/Kolkata timezone in table
+how to format 2025-01-12 18:47:30.315905 in jinja retrieve from db dd-mm-yy and time hh:mm:ss 
+How to set bootstrap table paging in html table
+ID asc and desc order Column 
+if search in table
+convert it to <select><option > in split it by comma
+Convert for <option>Skin Rash</option> to <option value="Skin Rash" {% if s4=="Skin Rash" %}selected{% endif %}>Skin Rash</option> in above <option> elements is 133
+replace s4 to s1 in above 133 elements

@@ -3,7 +3,6 @@
 {% block body %}
 
 <!-- About Start -->
-
 <div class="container-xxl py-3" style="background-color: #cde8ff;">
     <div class="container">
         <div class="row g-5">
@@ -19,23 +18,272 @@
                                 <div class="col-12 col-sm-12">
                                     <h5 class="mb-1">Symptom1</h5>
                                     <select class="form-select border-1 mb-2 text-dark" id="ddlsymtom1"
-                                        name="ddlsymtom1">
+                                        name="ddlsymtom1" >
                                         <option selected>Choose Symptom1</option>
-
-                                        <option value="Itching" {% if s1=="Itching" %}selected{% endif %}>
-                                            Itching</option>
+                                        <option value="Itching" {% if s1=="Itching" %}selected{% endif %}>Itching
+                                        </option>
                                         <option value="Skin Rash" {% if s1=="Skin Rash" %}selected{% endif %}>Skin Rash
                                         </option>
                                         <option value="Nodal Skin Eruptions" {% if s1=="Nodal Skin Eruptions"
-                                            %}selected{% endif %}>Nodal Skin
-                                            Eruptions</option>
+                                            %}selected{% endif %}>Nodal Skin Eruptions</option>
                                         <option value="Continuous Sneezing" {% if s1=="Continuous Sneezing" %}selected{%
-                                            endif %}>Continuous
-                                            Sneezing</option>
+                                            endif %}>Continuous Sneezing</option>
                                         <option value="Shivering" {% if s1=="Shivering" %}selected{% endif %}>Shivering
                                         </option>
-                                        <option value="Chills" {% if s1=="Chills" %}selected{% endif %}>
-                                            Chills</option>
+                                        <option value="Chills" {% if s1=="Chills" %}selected{% endif %}>Chills</option>
+                                        <option value="Joint Pain" {% if s1=="Joint Pain" %}selected{% endif %}>Joint
+                                            Pain</option>
+                                        <option value="Stomach Pain" {% if s1=="Stomach Pain" %}selected{% endif %}>
+                                            Stomach Pain</option>
+                                        <option value="Acidity" {% if s1=="Acidity" %}selected{% endif %}>Acidity
+                                        </option>
+                                        <option value="Ulcers On Tongue" {% if s1=="Ulcers On Tongue" %}selected{% endif
+                                            %}>Ulcers On Tongue</option>
+                                        <option value="Muscle Wasting" {% if s1=="Muscle Wasting" %}selected{% endif %}>
+                                            Muscle Wasting</option>
+                                        <option value="Vomiting" {% if s1=="Vomiting" %}selected{% endif %}>Vomiting
+                                        </option>
+                                        <option value="Burning Micturition" {% if s1=="Burning Micturition" %}selected{%
+                                            endif %}>Burning Micturition</option>
+                                        <option value="Spotting Urination" {% if s1=="Spotting Urination" %}selected{%
+                                            endif %}>Spotting Urination</option>
+                                        <option value="Fatigue" {% if s1=="Fatigue" %}selected{% endif %}>Fatigue
+                                        </option>
+                                        <option value="Weight Gain" {% if s1=="Weight Gain" %}selected{% endif %}>Weight
+                                            Gain</option>
+                                        <option value="Anxiety" {% if s1=="Anxiety" %}selected{% endif %}>Anxiety
+                                        </option>
+                                        <option value="Cold Hands And Feets" {% if s1=="Cold Hands And Feets"
+                                            %}selected{% endif %}>Cold Hands And Feets</option>
+                                        <option value="Mood Swings" {% if s1=="Mood Swings" %}selected{% endif %}>Mood
+                                            Swings</option>
+                                        <option value="Weight Loss" {% if s1=="Weight Loss" %}selected{% endif %}>Weight
+                                            Loss</option>
+                                        <option value="Restlessness" {% if s1=="Restlessness" %}selected{% endif %}>
+                                            Restlessness</option>
+                                        <option value="Lethargy" {% if s1=="Lethargy" %}selected{% endif %}>Lethargy
+                                        </option>
+                                        <option value="Patches In Throat" {% if s1=="Patches In Throat" %}selected{%
+                                            endif %}>Patches In Throat</option>
+                                        <option value="Irregular Sugar Level" {% if s1=="Irregular Sugar Level"
+                                            %}selected{% endif %}>Irregular Sugar Level</option>
+                                        <option value="Cough" {% if s1=="Cough" %}selected{% endif %}>Cough</option>
+                                        <option value="High Fever" {% if s1=="High Fever" %}selected{% endif %}>High
+                                            Fever</option>
+                                        <option value="Sunken Eyes" {% if s1=="Sunken Eyes" %}selected{% endif %}>Sunken
+                                            Eyes</option>
+                                        <option value="Breathlessness" {% if s1=="Breathlessness" %}selected{% endif %}>
+                                            Breathlessness</option>
+                                        <option value="Sweating" {% if s1=="Sweating" %}selected{% endif %}>Sweating
+                                        </option>
+                                        <option value="Dehydration" {% if s1=="Dehydration" %}selected{% endif %}>
+                                            Dehydration</option>
+                                        <option value="Indigestion" {% if s1=="Indigestion" %}selected{% endif %}>
+                                            Indigestion</option>
+                                        <option value="Headache" {% if s1=="Headache" %}selected{% endif %}>Headache
+                                        </option>
+                                        <option value="Yellowish Skin" {% if s1=="Yellowish Skin" %}selected{% endif %}>
+                                            Yellowish Skin</option>
+                                        <option value="Dark Urine" {% if s1=="Dark Urine" %}selected{% endif %}>Dark
+                                            Urine</option>
+                                        <option value="Nausea" {% if s1=="Nausea" %}selected{% endif %}>Nausea</option>
+                                        <option value="Loss Of Appetite" {% if s1=="Loss Of Appetite" %}selected{% endif
+                                            %}>Loss Of Appetite</option>
+                                        <option value="Pain Behind The Eyes" {% if s1=="Pain Behind The Eyes"
+                                            %}selected{% endif %}>Pain Behind The Eyes</option>
+                                        <option value="Back Pain" {% if s1=="Back Pain" %}selected{% endif %}>Back Pain
+                                        </option>
+                                        <option value="Constipation" {% if s1=="Constipation" %}selected{% endif %}>
+                                            Constipation</option>
+                                        <option value="Abdominal Pain" {% if s1=="Abdominal Pain" %}selected{% endif %}>
+                                            Abdominal Pain</option>
+                                        <option value="Diarrhoea" {% if s1=="Diarrhoea" %}selected{% endif %}>Diarrhoea
+                                        </option>
+                                        <option value="Mild Fever" {% if s1=="Mild Fever" %}selected{% endif %}>Mild
+                                            Fever</option>
+                                        <option value="Yellow Urine" {% if s1=="Yellow Urine" %}selected{% endif %}>
+                                            Yellow Urine</option>
+                                        <option value="Yellowing Of Eyes" {% if s1=="Yellowing Of Eyes" %}selected{%
+                                            endif %}>Yellowing Of Eyes</option>
+                                        <option value="Acute Liver Failure" {% if s1=="Acute Liver Failure" %}selected{%
+                                            endif %}>Acute Liver Failure</option>
+                                        <option value="Fluid Overload" {% if s1=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Swelling Of Stomach" {% if s1=="Swelling Of Stomach" %}selected{%
+                                            endif %}>Swelling Of Stomach</option>
+                                        <option value="Swelled Lymph Nodes" {% if s1=="Swelled Lymph Nodes" %}selected{%
+                                            endif %}>Swelled Lymph Nodes</option>
+                                        <option value="Malaise" {% if s1=="Malaise" %}selected{% endif %}>Malaise
+                                        </option>
+                                        <option value="Blurred And Distorted Vision" {% if
+                                            s1=="Blurred And Distorted Vision" %}selected{% endif %}>Blurred And
+                                            Distorted Vision</option>
+                                        <option value="Phlegm" {% if s1=="Phlegm" %}selected{% endif %}>Phlegm</option>
+                                        <option value="Throat Irritation" {% if s1=="Throat Irritation" %}selected{%
+                                            endif %}>Throat Irritation</option>
+                                        <option value="Redness Of Eyes" {% if s1=="Redness Of Eyes" %}selected{% endif
+                                            %}>Redness Of Eyes</option>
+                                        <option value="Sinus Pressure" {% if s1=="Sinus Pressure" %}selected{% endif %}>
+                                            Sinus Pressure</option>
+                                        <option value="Runny Nose" {% if s1=="Runny Nose" %}selected{% endif %}>Runny
+                                            Nose</option>
+                                        <option value="Congestion" {% if s1=="Congestion" %}selected{% endif %}>
+                                            Congestion</option>
+                                        <option value="Chest Pain" {% if s1=="Chest Pain" %}selected{% endif %}>Chest
+                                            Pain</option>
+                                        <option value="Weakness In Limbs" {% if s1=="Weakness In Limbs" %}selected{%
+                                            endif %}>Weakness In Limbs</option>
+                                        <option value="Fast Heart Rate" {% if s1=="Fast Heart Rate" %}selected{% endif
+                                            %}>Fast Heart Rate</option>
+                                        <option value="Pain During Bowel Movements" {% if
+                                            s1=="Pain During Bowel Movements" %}selected{% endif %}>Pain During Bowel
+                                            Movements</option>
+                                        <option value="Pain In Anal Region" {% if s1=="Pain In Anal Region" %}selected{%
+                                            endif %}>Pain In Anal Region</option>
+                                        <option value="Bloody Stool" {% if s1=="Bloody Stool" %}selected{% endif %}>
+                                            Bloody Stool</option>
+                                        <option value="Irritation In Anus" {% if s1=="Irritation In Anus" %}selected{%
+                                            endif %}>Irritation In Anus</option>
+                                        <option value="Neck Pain" {% if s1=="Neck Pain" %}selected{% endif %}>Neck Pain
+                                        </option>
+                                        <option value="Dizziness" {% if s1=="Dizziness" %}selected{% endif %}>Dizziness
+                                        </option>
+                                        <option value="Cramps" {% if s1=="Cramps" %}selected{% endif %}>Cramps</option>
+                                        <option value="Bruising" {% if s1=="Bruising" %}selected{% endif %}>Bruising
+                                        </option>
+                                        <option value="Obesity" {% if s1=="Obesity" %}selected{% endif %}>Obesity
+                                        </option>
+                                        <option value="Swollen Legs" {% if s1=="Swollen Legs" %}selected{% endif %}>
+                                            Swollen Legs</option>
+                                        <option value="Swollen Blood Vessels" {% if s1=="Swollen Blood Vessels"
+                                            %}selected{% endif %}>Swollen Blood Vessels</option>
+                                        <option value="Puffy Face And Eyes" {% if s1=="Puffy Face And Eyes" %}selected{%
+                                            endif %}>Puffy Face And Eyes</option>
+                                        <option value="Enlarged Thyroid" {% if s1=="Enlarged Thyroid" %}selected{% endif
+                                            %}>Enlarged Thyroid</option>
+                                        <option value="Brittle Nails" {% if s1=="Brittle Nails" %}selected{% endif %}>
+                                            Brittle Nails</option>
+                                        <option value="Swollen Extremeties" {% if s1=="Swollen Extremeties" %}selected{%
+                                            endif %}>Swollen Extremeties</option>
+                                        <option value="Excessive Hunger" {% if s1=="Excessive Hunger" %}selected{% endif
+                                            %}>Excessive Hunger</option>
+                                        <option value="Extra Marital Contacts" {% if s1=="Extra Marital Contacts"
+                                            %}selected{% endif %}>Extra Marital Contacts</option>
+                                        <option value="Drying And Tingling Lips" {% if s1=="Drying And Tingling Lips"
+                                            %}selected{% endif %}>Drying And Tingling Lips</option>
+                                        <option value="Slurred Speech" {% if s1=="Slurred Speech" %}selected{% endif %}>
+                                            Slurred Speech</option>
+                                        <option value="Knee Pain" {% if s1=="Knee Pain" %}selected{% endif %}>Knee Pain
+                                        </option>
+                                        <option value="Hip Joint Pain" {% if s1=="Hip Joint Pain" %}selected{% endif %}>
+                                            Hip Joint Pain</option>
+                                        <option value="Muscle Weakness" {% if s1=="Muscle Weakness" %}selected{% endif
+                                            %}>Muscle Weakness</option>
+                                        <option value="Stiff Neck" {% if s1=="Stiff Neck" %}selected{% endif %}>Stiff
+                                            Neck</option>
+                                        <option value="Swelling Joints" {% if s1=="Swelling Joints" %}selected{% endif
+                                            %}>Swelling Joints</option>
+                                        <option value="Movement Stiffness" {% if s1=="Movement Stiffness" %}selected{%
+                                            endif %}>Movement Stiffness</option>
+                                        <option value="Spinning Movements" {% if s1=="Spinning Movements" %}selected{%
+                                            endif %}>Spinning Movements</option>
+                                        <option value="Loss Of Balance" {% if s1=="Loss Of Balance" %}selected{% endif
+                                            %}>Loss Of Balance</option>
+                                        <option value="Unsteadiness" {% if s1=="Unsteadiness" %}selected{% endif %}>
+                                            Unsteadiness</option>
+                                        <option value="Weakness Of One Body Side" {% if s1=="Weakness Of One Body Side"
+                                            %}selected{% endif %}>Weakness Of One Body Side</option>
+                                        <option value="Loss Of Smell" {% if s1=="Loss Of Smell" %}selected{% endif %}>
+                                            Loss Of Smell</option>
+                                        <option value="Bladder Discomfort" {% if s1=="Bladder Discomfort" %}selected{%
+                                            endif %}>Bladder Discomfort</option>
+                                        <option value="Foul Smell Of Urine" {% if s1=="Foul Smell Of Urine" %}selected{%
+                                            endif %}>Foul Smell Of Urine</option>
+                                        <option value="Continuous Feel Of Urine" {% if s1=="Continuous Feel Of Urine"
+                                            %}selected{% endif %}>Continuous Feel Of Urine</option>
+                                        <option value="Passage Of Gases" {% if s1=="Passage Of Gases" %}selected{% endif
+                                            %}>Passage Of Gases</option>
+                                        <option value="Internal Itching" {% if s1=="Internal Itching" %}selected{% endif
+                                            %}>Internal Itching</option>
+                                        <option value="Toxic Look (Typhos)" {% if s1=="Toxic Look (Typhos)" %}selected{%
+                                            endif %}>Toxic Look (Typhos)</option>
+                                        <option value="Depression" {% if s1=="Depression" %}selected{% endif %}>
+                                            Depression</option>
+                                        <option value="Irritability" {% if s1=="Irritability" %}selected{% endif %}>
+                                            Irritability</option>
+                                        <option value="Muscle Pain" {% if s1=="Muscle Pain" %}selected{% endif %}>Muscle
+                                            Pain</option>
+                                        <option value="Altered Sensorium" {% if s1=="Altered Sensorium" %}selected{%
+                                            endif %}>Altered Sensorium</option>
+                                        <option value="Red Spots Over Body" {% if s1=="Red Spots Over Body" %}selected{%
+                                            endif %}>Red Spots Over Body</option>
+                                        <option value="Belly Pain" {% if s1=="Belly Pain" %}selected{% endif %}>Belly
+                                            Pain</option>
+                                        <option value="Abnormal Menstruation" {% if s1=="Abnormal Menstruation"
+                                            %}selected{% endif %}>Abnormal Menstruation</option>
+                                        <option value="Dischromic Patches" {% if s1=="Dischromic Patches" %}selected{%
+                                            endif %}>Dischromic Patches</option>
+                                        <option value="Watering From Eyes" {% if s1=="Watering From Eyes" %}selected{%
+                                            endif %}>Watering From Eyes</option>
+                                        <option value="Increased Appetite" {% if s1=="Increased Appetite" %}selected{%
+                                            endif %}>Increased Appetite</option>
+                                        <option value="Polyuria" {% if s1=="Polyuria" %}selected{% endif %}>Polyuria
+                                        </option>
+                                        <option value="Family History" {% if s1=="Family History" %}selected{% endif %}>
+                                            Family History</option>
+                                        <option value="Mucoid Sputum" {% if s1=="Mucoid Sputum" %}selected{% endif %}>
+                                            Mucoid Sputum</option>
+                                        <option value="Rusty Sputum" {% if s1=="Rusty Sputum" %}selected{% endif %}>
+                                            Rusty Sputum</option>
+                                        <option value="Lack Of Concentration" {% if s1=="Lack Of Concentration"
+                                            %}selected{% endif %}>Lack Of Concentration</option>
+                                        <option value="Visual Disturbances" {% if s1=="Visual Disturbances" %}selected{%
+                                            endif %}>Visual Disturbances</option>
+                                        <option value="Receiving Blood Transfusion" {% if
+                                            s1=="Receiving Blood Transfusion" %}selected{% endif %}>Receiving Blood
+                                            Transfusion</option>
+                                        <option value="Receiving Unsterile Injections" {% if
+                                            s1=="Receiving Unsterile Injections" %}selected{% endif %}>Receiving
+                                            Unsterile Injections</option>
+                                        <option value="Coma" {% if s1=="Coma" %}selected{% endif %}>Coma</option>
+                                        <option value="Stomach Bleeding" {% if s1=="Stomach Bleeding" %}selected{% endif
+                                            %}>Stomach Bleeding</option>
+                                        <option value="Distention Of Abdomen" {% if s1=="Distention Of Abdomen"
+                                            %}selected{% endif %}>Distention Of Abdomen</option>
+                                        <option value="History Of Alcohol Consumption" {% if
+                                            s1=="History Of Alcohol Consumption" %}selected{% endif %}>History Of
+                                            Alcohol Consumption</option>
+                                        <option value="Fluid Overload" {% if s1=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Blood In Sputum" {% if s1=="Blood In Sputum" %}selected{% endif
+                                            %}>Blood In Sputum</option>
+                                        <option value="Prominent Veins On Calf" {% if s1=="Prominent Veins On Calf"
+                                            %}selected{% endif %}>Prominent Veins On Calf</option>
+                                        <option value="Palpitations" {% if s1=="Palpitations" %}selected{% endif %}>
+                                            Palpitations</option>
+                                        <option value="Painful Walking" {% if s1=="Painful Walking" %}selected{% endif
+                                            %}>Painful Walking</option>
+                                        <option value="Pus Filled Pimples" {% if s1=="Pus Filled Pimples" %}selected{%
+                                            endif %}>Pus Filled Pimples</option>
+                                        <option value="Blackheads" {% if s1=="Blackheads" %}selected{% endif %}>
+                                            Blackheads</option>
+                                        <option value="Scurring" {% if s1=="Scurring" %}selected{% endif %}>Scurring
+                                        </option>
+                                        <option value="Skin Peeling" {% if s1=="Skin Peeling" %}selected{% endif %}>Skin
+                                            Peeling</option>
+                                        <option value="Silver Like Dusting" {% if s1=="Silver Like Dusting" %}selected{%
+                                            endif %}>Silver Like Dusting</option>
+                                        <option value="Small Dents In Nails" {% if s1=="Small Dents In Nails"
+                                            %}selected{% endif %}>Small Dents In Nails</option>
+                                        <option value="Inflammatory Nails" {% if s1=="Inflammatory Nails" %}selected{%
+                                            endif %}>Inflammatory Nails</option>
+                                        <option value="Blister" {% if s1=="Blister" %}selected{% endif %}>Blister
+                                        </option>
+                                        <option value="Red Sore Around Nose" {% if s1=="Red Sore Around Nose"
+                                            %}selected{% endif %}>Red Sore Around Nose</option>
+                                        <option value="Yellow Crust Ooze" {% if s1=="Yellow Crust Ooze" %}selected{%
+                                            endif %}>Yellow Crust Ooze</option>
+
                                     </select>
                                 </div>
                             </div>
@@ -44,20 +292,270 @@
                                     <h5 class="mb-1" style="font-weight: 500;">Symptom2</h5>
                                     <select class="form-select border-1 mb-2" id="ddlsymtom2" name="ddlsymtom2">
                                         <option selected>Choose Symptom2</option>
-                                        <option value="Itching" {% if s2=="Itching" %}selected{% endif %}>
-                                            Itching</option>
+                                        <option value="Itching" {% if s2=="Itching" %}selected{% endif %}>Itching
+                                        </option>
                                         <option value="Skin Rash" {% if s2=="Skin Rash" %}selected{% endif %}>Skin Rash
                                         </option>
                                         <option value="Nodal Skin Eruptions" {% if s2=="Nodal Skin Eruptions"
-                                            %}selected{% endif %}>Nodal Skin
-                                            Eruptions</option>
+                                            %}selected{% endif %}>Nodal Skin Eruptions</option>
                                         <option value="Continuous Sneezing" {% if s2=="Continuous Sneezing" %}selected{%
-                                            endif %}>Continuous
-                                            Sneezing</option>
+                                            endif %}>Continuous Sneezing</option>
                                         <option value="Shivering" {% if s2=="Shivering" %}selected{% endif %}>Shivering
                                         </option>
-                                        <option value="Chills" {% if s2=="Chills" %}selected{% endif %}>
-                                            Chills</option>
+                                        <option value="Chills" {% if s2=="Chills" %}selected{% endif %}>Chills</option>
+                                        <option value="Joint Pain" {% if s2=="Joint Pain" %}selected{% endif %}>Joint
+                                            Pain</option>
+                                        <option value="Stomach Pain" {% if s2=="Stomach Pain" %}selected{% endif %}>
+                                            Stomach Pain</option>
+                                        <option value="Acidity" {% if s2=="Acidity" %}selected{% endif %}>Acidity
+                                        </option>
+                                        <option value="Ulcers On Tongue" {% if s2=="Ulcers On Tongue" %}selected{% endif
+                                            %}>Ulcers On Tongue</option>
+                                        <option value="Muscle Wasting" {% if s2=="Muscle Wasting" %}selected{% endif %}>
+                                            Muscle Wasting</option>
+                                        <option value="Vomiting" {% if s2=="Vomiting" %}selected{% endif %}>Vomiting
+                                        </option>
+                                        <option value="Burning Micturition" {% if s2=="Burning Micturition" %}selected{%
+                                            endif %}>Burning Micturition</option>
+                                        <option value="Spotting Urination" {% if s2=="Spotting Urination" %}selected{%
+                                            endif %}>Spotting Urination</option>
+                                        <option value="Fatigue" {% if s2=="Fatigue" %}selected{% endif %}>Fatigue
+                                        </option>
+                                        <option value="Weight Gain" {% if s2=="Weight Gain" %}selected{% endif %}>Weight
+                                            Gain</option>
+                                        <option value="Anxiety" {% if s2=="Anxiety" %}selected{% endif %}>Anxiety
+                                        </option>
+                                        <option value="Cold Hands And Feets" {% if s2=="Cold Hands And Feets"
+                                            %}selected{% endif %}>Cold Hands And Feets</option>
+                                        <option value="Mood Swings" {% if s2=="Mood Swings" %}selected{% endif %}>Mood
+                                            Swings</option>
+                                        <option value="Weight Loss" {% if s2=="Weight Loss" %}selected{% endif %}>Weight
+                                            Loss</option>
+                                        <option value="Restlessness" {% if s2=="Restlessness" %}selected{% endif %}>
+                                            Restlessness</option>
+                                        <option value="Lethargy" {% if s2=="Lethargy" %}selected{% endif %}>Lethargy
+                                        </option>
+                                        <option value="Patches In Throat" {% if s2=="Patches In Throat" %}selected{%
+                                            endif %}>Patches In Throat</option>
+                                        <option value="Irregular Sugar Level" {% if s2=="Irregular Sugar Level"
+                                            %}selected{% endif %}>Irregular Sugar Level</option>
+                                        <option value="Cough" {% if s2=="Cough" %}selected{% endif %}>Cough</option>
+                                        <option value="High Fever" {% if s2=="High Fever" %}selected{% endif %}>High
+                                            Fever</option>
+                                        <option value="Sunken Eyes" {% if s2=="Sunken Eyes" %}selected{% endif %}>Sunken
+                                            Eyes</option>
+                                        <option value="Breathlessness" {% if s2=="Breathlessness" %}selected{% endif %}>
+                                            Breathlessness</option>
+                                        <option value="Sweating" {% if s2=="Sweating" %}selected{% endif %}>Sweating
+                                        </option>
+                                        <option value="Dehydration" {% if s2=="Dehydration" %}selected{% endif %}>
+                                            Dehydration</option>
+                                        <option value="Indigestion" {% if s2=="Indigestion" %}selected{% endif %}>
+                                            Indigestion</option>
+                                        <option value="Headache" {% if s2=="Headache" %}selected{% endif %}>Headache
+                                        </option>
+                                        <option value="Yellowish Skin" {% if s2=="Yellowish Skin" %}selected{% endif %}>
+                                            Yellowish Skin</option>
+                                        <option value="Dark Urine" {% if s2=="Dark Urine" %}selected{% endif %}>Dark
+                                            Urine</option>
+                                        <option value="Nausea" {% if s2=="Nausea" %}selected{% endif %}>Nausea</option>
+                                        <option value="Loss Of Appetite" {% if s2=="Loss Of Appetite" %}selected{% endif
+                                            %}>Loss Of Appetite</option>
+                                        <option value="Pain Behind The Eyes" {% if s2=="Pain Behind The Eyes"
+                                            %}selected{% endif %}>Pain Behind The Eyes</option>
+                                        <option value="Back Pain" {% if s2=="Back Pain" %}selected{% endif %}>Back Pain
+                                        </option>
+                                        <option value="Constipation" {% if s2=="Constipation" %}selected{% endif %}>
+                                            Constipation</option>
+                                        <option value="Abdominal Pain" {% if s2=="Abdominal Pain" %}selected{% endif %}>
+                                            Abdominal Pain</option>
+                                        <option value="Diarrhoea" {% if s2=="Diarrhoea" %}selected{% endif %}>Diarrhoea
+                                        </option>
+                                        <option value="Mild Fever" {% if s2=="Mild Fever" %}selected{% endif %}>Mild
+                                            Fever</option>
+                                        <option value="Yellow Urine" {% if s2=="Yellow Urine" %}selected{% endif %}>
+                                            Yellow Urine</option>
+                                        <option value="Yellowing Of Eyes" {% if s2=="Yellowing Of Eyes" %}selected{%
+                                            endif %}>Yellowing Of Eyes</option>
+                                        <option value="Acute Liver Failure" {% if s2=="Acute Liver Failure" %}selected{%
+                                            endif %}>Acute Liver Failure</option>
+                                        <option value="Fluid Overload" {% if s2=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Swelling Of Stomach" {% if s2=="Swelling Of Stomach" %}selected{%
+                                            endif %}>Swelling Of Stomach</option>
+                                        <option value="Swelled Lymph Nodes" {% if s2=="Swelled Lymph Nodes" %}selected{%
+                                            endif %}>Swelled Lymph Nodes</option>
+                                        <option value="Malaise" {% if s2=="Malaise" %}selected{% endif %}>Malaise
+                                        </option>
+                                        <option value="Blurred And Distorted Vision" {% if
+                                            s2=="Blurred And Distorted Vision" %}selected{% endif %}>Blurred And
+                                            Distorted Vision</option>
+                                        <option value="Phlegm" {% if s2=="Phlegm" %}selected{% endif %}>Phlegm</option>
+                                        <option value="Throat Irritation" {% if s2=="Throat Irritation" %}selected{%
+                                            endif %}>Throat Irritation</option>
+                                        <option value="Redness Of Eyes" {% if s2=="Redness Of Eyes" %}selected{% endif
+                                            %}>Redness Of Eyes</option>
+                                        <option value="Sinus Pressure" {% if s2=="Sinus Pressure" %}selected{% endif %}>
+                                            Sinus Pressure</option>
+                                        <option value="Runny Nose" {% if s2=="Runny Nose" %}selected{% endif %}>Runny
+                                            Nose</option>
+                                        <option value="Congestion" {% if s2=="Congestion" %}selected{% endif %}>
+                                            Congestion</option>
+                                        <option value="Chest Pain" {% if s2=="Chest Pain" %}selected{% endif %}>Chest
+                                            Pain</option>
+                                        <option value="Weakness In Limbs" {% if s2=="Weakness In Limbs" %}selected{%
+                                            endif %}>Weakness In Limbs</option>
+                                        <option value="Fast Heart Rate" {% if s2=="Fast Heart Rate" %}selected{% endif
+                                            %}>Fast Heart Rate</option>
+                                        <option value="Pain During Bowel Movements" {% if
+                                            s2=="Pain During Bowel Movements" %}selected{% endif %}>Pain During Bowel
+                                            Movements</option>
+                                        <option value="Pain In Anal Region" {% if s2=="Pain In Anal Region" %}selected{%
+                                            endif %}>Pain In Anal Region</option>
+                                        <option value="Bloody Stool" {% if s2=="Bloody Stool" %}selected{% endif %}>
+                                            Bloody Stool</option>
+                                        <option value="Irritation In Anus" {% if s2=="Irritation In Anus" %}selected{%
+                                            endif %}>Irritation In Anus</option>
+                                        <option value="Neck Pain" {% if s2=="Neck Pain" %}selected{% endif %}>Neck Pain
+                                        </option>
+                                        <option value="Dizziness" {% if s2=="Dizziness" %}selected{% endif %}>Dizziness
+                                        </option>
+                                        <option value="Cramps" {% if s2=="Cramps" %}selected{% endif %}>Cramps</option>
+                                        <option value="Bruising" {% if s2=="Bruising" %}selected{% endif %}>Bruising
+                                        </option>
+                                        <option value="Obesity" {% if s2=="Obesity" %}selected{% endif %}>Obesity
+                                        </option>
+                                        <option value="Swollen Legs" {% if s2=="Swollen Legs" %}selected{% endif %}>
+                                            Swollen Legs</option>
+                                        <option value="Swollen Blood Vessels" {% if s2=="Swollen Blood Vessels"
+                                            %}selected{% endif %}>Swollen Blood Vessels</option>
+                                        <option value="Puffy Face And Eyes" {% if s2=="Puffy Face And Eyes" %}selected{%
+                                            endif %}>Puffy Face And Eyes</option>
+                                        <option value="Enlarged Thyroid" {% if s2=="Enlarged Thyroid" %}selected{% endif
+                                            %}>Enlarged Thyroid</option>
+                                        <option value="Brittle Nails" {% if s2=="Brittle Nails" %}selected{% endif %}>
+                                            Brittle Nails</option>
+                                        <option value="Swollen Extremeties" {% if s2=="Swollen Extremeties" %}selected{%
+                                            endif %}>Swollen Extremeties</option>
+                                        <option value="Excessive Hunger" {% if s2=="Excessive Hunger" %}selected{% endif
+                                            %}>Excessive Hunger</option>
+                                        <option value="Extra Marital Contacts" {% if s2=="Extra Marital Contacts"
+                                            %}selected{% endif %}>Extra Marital Contacts</option>
+                                        <option value="Drying And Tingling Lips" {% if s2=="Drying And Tingling Lips"
+                                            %}selected{% endif %}>Drying And Tingling Lips</option>
+                                        <option value="Slurred Speech" {% if s2=="Slurred Speech" %}selected{% endif %}>
+                                            Slurred Speech</option>
+                                        <option value="Knee Pain" {% if s2=="Knee Pain" %}selected{% endif %}>Knee Pain
+                                        </option>
+                                        <option value="Hip Joint Pain" {% if s2=="Hip Joint Pain" %}selected{% endif %}>
+                                            Hip Joint Pain</option>
+                                        <option value="Muscle Weakness" {% if s2=="Muscle Weakness" %}selected{% endif
+                                            %}>Muscle Weakness</option>
+                                        <option value="Stiff Neck" {% if s2=="Stiff Neck" %}selected{% endif %}>Stiff
+                                            Neck</option>
+                                        <option value="Swelling Joints" {% if s2=="Swelling Joints" %}selected{% endif
+                                            %}>Swelling Joints</option>
+                                        <option value="Movement Stiffness" {% if s2=="Movement Stiffness" %}selected{%
+                                            endif %}>Movement Stiffness</option>
+                                        <option value="Spinning Movements" {% if s2=="Spinning Movements" %}selected{%
+                                            endif %}>Spinning Movements</option>
+                                        <option value="Loss Of Balance" {% if s2=="Loss Of Balance" %}selected{% endif
+                                            %}>Loss Of Balance</option>
+                                        <option value="Unsteadiness" {% if s2=="Unsteadiness" %}selected{% endif %}>
+                                            Unsteadiness</option>
+                                        <option value="Weakness Of One Body Side" {% if s2=="Weakness Of One Body Side"
+                                            %}selected{% endif %}>Weakness Of One Body Side</option>
+                                        <option value="Loss Of Smell" {% if s2=="Loss Of Smell" %}selected{% endif %}>
+                                            Loss Of Smell</option>
+                                        <option value="Bladder Discomfort" {% if s2=="Bladder Discomfort" %}selected{%
+                                            endif %}>Bladder Discomfort</option>
+                                        <option value="Foul Smell Of Urine" {% if s2=="Foul Smell Of Urine" %}selected{%
+                                            endif %}>Foul Smell Of Urine</option>
+                                        <option value="Continuous Feel Of Urine" {% if s2=="Continuous Feel Of Urine"
+                                            %}selected{% endif %}>Continuous Feel Of Urine</option>
+                                        <option value="Passage Of Gases" {% if s2=="Passage Of Gases" %}selected{% endif
+                                            %}>Passage Of Gases</option>
+                                        <option value="Internal Itching" {% if s2=="Internal Itching" %}selected{% endif
+                                            %}>Internal Itching</option>
+                                        <option value="Toxic Look (Typhos)" {% if s2=="Toxic Look (Typhos)" %}selected{%
+                                            endif %}>Toxic Look (Typhos)</option>
+                                        <option value="Depression" {% if s2=="Depression" %}selected{% endif %}>
+                                            Depression</option>
+                                        <option value="Irritability" {% if s2=="Irritability" %}selected{% endif %}>
+                                            Irritability</option>
+                                        <option value="Muscle Pain" {% if s2=="Muscle Pain" %}selected{% endif %}>Muscle
+                                            Pain</option>
+                                        <option value="Altered Sensorium" {% if s2=="Altered Sensorium" %}selected{%
+                                            endif %}>Altered Sensorium</option>
+                                        <option value="Red Spots Over Body" {% if s2=="Red Spots Over Body" %}selected{%
+                                            endif %}>Red Spots Over Body</option>
+                                        <option value="Belly Pain" {% if s2=="Belly Pain" %}selected{% endif %}>Belly
+                                            Pain</option>
+                                        <option value="Abnormal Menstruation" {% if s2=="Abnormal Menstruation"
+                                            %}selected{% endif %}>Abnormal Menstruation</option>
+                                        <option value="Dischromic Patches" {% if s2=="Dischromic Patches" %}selected{%
+                                            endif %}>Dischromic Patches</option>
+                                        <option value="Watering From Eyes" {% if s2=="Watering From Eyes" %}selected{%
+                                            endif %}>Watering From Eyes</option>
+                                        <option value="Increased Appetite" {% if s2=="Increased Appetite" %}selected{%
+                                            endif %}>Increased Appetite</option>
+                                        <option value="Polyuria" {% if s2=="Polyuria" %}selected{% endif %}>Polyuria
+                                        </option>
+                                        <option value="Family History" {% if s2=="Family History" %}selected{% endif %}>
+                                            Family History</option>
+                                        <option value="Mucoid Sputum" {% if s2=="Mucoid Sputum" %}selected{% endif %}>
+                                            Mucoid Sputum</option>
+                                        <option value="Rusty Sputum" {% if s2=="Rusty Sputum" %}selected{% endif %}>
+                                            Rusty Sputum</option>
+                                        <option value="Lack Of Concentration" {% if s2=="Lack Of Concentration"
+                                            %}selected{% endif %}>Lack Of Concentration</option>
+                                        <option value="Visual Disturbances" {% if s2=="Visual Disturbances" %}selected{%
+                                            endif %}>Visual Disturbances</option>
+                                        <option value="Receiving Blood Transfusion" {% if
+                                            s2=="Receiving Blood Transfusion" %}selected{% endif %}>Receiving Blood
+                                            Transfusion</option>
+                                        <option value="Receiving Unsterile Injections" {% if
+                                            s2=="Receiving Unsterile Injections" %}selected{% endif %}>Receiving
+                                            Unsterile Injections</option>
+                                        <option value="Coma" {% if s2=="Coma" %}selected{% endif %}>Coma</option>
+                                        <option value="Stomach Bleeding" {% if s2=="Stomach Bleeding" %}selected{% endif
+                                            %}>Stomach Bleeding</option>
+                                        <option value="Distention Of Abdomen" {% if s2=="Distention Of Abdomen"
+                                            %}selected{% endif %}>Distention Of Abdomen</option>
+                                        <option value="History Of Alcohol Consumption" {% if
+                                            s2=="History Of Alcohol Consumption" %}selected{% endif %}>History Of
+                                            Alcohol Consumption</option>
+                                        <option value="Fluid Overload" {% if s2=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Blood In Sputum" {% if s2=="Blood In Sputum" %}selected{% endif
+                                            %}>Blood In Sputum</option>
+                                        <option value="Prominent Veins On Calf" {% if s2=="Prominent Veins On Calf"
+                                            %}selected{% endif %}>Prominent Veins On Calf</option>
+                                        <option value="Palpitations" {% if s2=="Palpitations" %}selected{% endif %}>
+                                            Palpitations</option>
+                                        <option value="Painful Walking" {% if s2=="Painful Walking" %}selected{% endif
+                                            %}>Painful Walking</option>
+                                        <option value="Pus Filled Pimples" {% if s2=="Pus Filled Pimples" %}selected{%
+                                            endif %}>Pus Filled Pimples</option>
+                                        <option value="Blackheads" {% if s2=="Blackheads" %}selected{% endif %}>
+                                            Blackheads</option>
+                                        <option value="Scurring" {% if s2=="Scurring" %}selected{% endif %}>Scurring
+                                        </option>
+                                        <option value="Skin Peeling" {% if s2=="Skin Peeling" %}selected{% endif %}>Skin
+                                            Peeling</option>
+                                        <option value="Silver Like Dusting" {% if s2=="Silver Like Dusting" %}selected{%
+                                            endif %}>Silver Like Dusting</option>
+                                        <option value="Small Dents In Nails" {% if s2=="Small Dents In Nails"
+                                            %}selected{% endif %}>Small Dents In Nails</option>
+                                        <option value="Inflammatory Nails" {% if s2=="Inflammatory Nails" %}selected{%
+                                            endif %}>Inflammatory Nails</option>
+                                        <option value="Blister" {% if s2=="Blister" %}selected{% endif %}>Blister
+                                        </option>
+                                        <option value="Red Sore Around Nose" {% if s2=="Red Sore Around Nose"
+                                            %}selected{% endif %}>Red Sore Around Nose</option>
+                                        <option value="Yellow Crust Ooze" {% if s2=="Yellow Crust Ooze" %}selected{%
+                                            endif %}>Yellow Crust Ooze</option>
+
                                     </select>
                                 </div>
                             </div>
@@ -66,20 +564,270 @@
                                     <h5 class="mb-1" style="font-weight: 500;">Symptom3</h5>
                                     <select class="form-select border-1 mb-2" name="ddlsymtom3">
                                         <option selected>Choose Symptom3</option>
-                                        <option value="Itching" {% if s3=="Itching" %}selected{% endif %}>
-                                            Itching</option>
+                                        <option value="Itching" {% if s3=="Itching" %}selected{% endif %}>Itching
+                                        </option>
                                         <option value="Skin Rash" {% if s3=="Skin Rash" %}selected{% endif %}>Skin Rash
                                         </option>
                                         <option value="Nodal Skin Eruptions" {% if s3=="Nodal Skin Eruptions"
-                                            %}selected{% endif %}>Nodal Skin
-                                            Eruptions</option>
+                                            %}selected{% endif %}>Nodal Skin Eruptions</option>
                                         <option value="Continuous Sneezing" {% if s3=="Continuous Sneezing" %}selected{%
-                                            endif %}>Continuous
-                                            Sneezing</option>
+                                            endif %}>Continuous Sneezing</option>
                                         <option value="Shivering" {% if s3=="Shivering" %}selected{% endif %}>Shivering
                                         </option>
-                                        <option value="Chills" {% if s3=="Chills" %}selected{% endif %}>
-                                            Chills</option>
+                                        <option value="Chills" {% if s3=="Chills" %}selected{% endif %}>Chills</option>
+                                        <option value="Joint Pain" {% if s3=="Joint Pain" %}selected{% endif %}>Joint
+                                            Pain</option>
+                                        <option value="Stomach Pain" {% if s3=="Stomach Pain" %}selected{% endif %}>
+                                            Stomach Pain</option>
+                                        <option value="Acidity" {% if s3=="Acidity" %}selected{% endif %}>Acidity
+                                        </option>
+                                        <option value="Ulcers On Tongue" {% if s3=="Ulcers On Tongue" %}selected{% endif
+                                            %}>Ulcers On Tongue</option>
+                                        <option value="Muscle Wasting" {% if s3=="Muscle Wasting" %}selected{% endif %}>
+                                            Muscle Wasting</option>
+                                        <option value="Vomiting" {% if s3=="Vomiting" %}selected{% endif %}>Vomiting
+                                        </option>
+                                        <option value="Burning Micturition" {% if s3=="Burning Micturition" %}selected{%
+                                            endif %}>Burning Micturition</option>
+                                        <option value="Spotting Urination" {% if s3=="Spotting Urination" %}selected{%
+                                            endif %}>Spotting Urination</option>
+                                        <option value="Fatigue" {% if s3=="Fatigue" %}selected{% endif %}>Fatigue
+                                        </option>
+                                        <option value="Weight Gain" {% if s3=="Weight Gain" %}selected{% endif %}>Weight
+                                            Gain</option>
+                                        <option value="Anxiety" {% if s3=="Anxiety" %}selected{% endif %}>Anxiety
+                                        </option>
+                                        <option value="Cold Hands And Feets" {% if s3=="Cold Hands And Feets"
+                                            %}selected{% endif %}>Cold Hands And Feets</option>
+                                        <option value="Mood Swings" {% if s3=="Mood Swings" %}selected{% endif %}>Mood
+                                            Swings</option>
+                                        <option value="Weight Loss" {% if s3=="Weight Loss" %}selected{% endif %}>Weight
+                                            Loss</option>
+                                        <option value="Restlessness" {% if s3=="Restlessness" %}selected{% endif %}>
+                                            Restlessness</option>
+                                        <option value="Lethargy" {% if s3=="Lethargy" %}selected{% endif %}>Lethargy
+                                        </option>
+                                        <option value="Patches In Throat" {% if s3=="Patches In Throat" %}selected{%
+                                            endif %}>Patches In Throat</option>
+                                        <option value="Irregular Sugar Level" {% if s3=="Irregular Sugar Level"
+                                            %}selected{% endif %}>Irregular Sugar Level</option>
+                                        <option value="Cough" {% if s3=="Cough" %}selected{% endif %}>Cough</option>
+                                        <option value="High Fever" {% if s3=="High Fever" %}selected{% endif %}>High
+                                            Fever</option>
+                                        <option value="Sunken Eyes" {% if s3=="Sunken Eyes" %}selected{% endif %}>Sunken
+                                            Eyes</option>
+                                        <option value="Breathlessness" {% if s3=="Breathlessness" %}selected{% endif %}>
+                                            Breathlessness</option>
+                                        <option value="Sweating" {% if s3=="Sweating" %}selected{% endif %}>Sweating
+                                        </option>
+                                        <option value="Dehydration" {% if s3=="Dehydration" %}selected{% endif %}>
+                                            Dehydration</option>
+                                        <option value="Indigestion" {% if s3=="Indigestion" %}selected{% endif %}>
+                                            Indigestion</option>
+                                        <option value="Headache" {% if s3=="Headache" %}selected{% endif %}>Headache
+                                        </option>
+                                        <option value="Yellowish Skin" {% if s3=="Yellowish Skin" %}selected{% endif %}>
+                                            Yellowish Skin</option>
+                                        <option value="Dark Urine" {% if s3=="Dark Urine" %}selected{% endif %}>Dark
+                                            Urine</option>
+                                        <option value="Nausea" {% if s3=="Nausea" %}selected{% endif %}>Nausea</option>
+                                        <option value="Loss Of Appetite" {% if s3=="Loss Of Appetite" %}selected{% endif
+                                            %}>Loss Of Appetite</option>
+                                        <option value="Pain Behind The Eyes" {% if s3=="Pain Behind The Eyes"
+                                            %}selected{% endif %}>Pain Behind The Eyes</option>
+                                        <option value="Back Pain" {% if s3=="Back Pain" %}selected{% endif %}>Back Pain
+                                        </option>
+                                        <option value="Constipation" {% if s3=="Constipation" %}selected{% endif %}>
+                                            Constipation</option>
+                                        <option value="Abdominal Pain" {% if s3=="Abdominal Pain" %}selected{% endif %}>
+                                            Abdominal Pain</option>
+                                        <option value="Diarrhoea" {% if s3=="Diarrhoea" %}selected{% endif %}>Diarrhoea
+                                        </option>
+                                        <option value="Mild Fever" {% if s3=="Mild Fever" %}selected{% endif %}>Mild
+                                            Fever</option>
+                                        <option value="Yellow Urine" {% if s3=="Yellow Urine" %}selected{% endif %}>
+                                            Yellow Urine</option>
+                                        <option value="Yellowing Of Eyes" {% if s3=="Yellowing Of Eyes" %}selected{%
+                                            endif %}>Yellowing Of Eyes</option>
+                                        <option value="Acute Liver Failure" {% if s3=="Acute Liver Failure" %}selected{%
+                                            endif %}>Acute Liver Failure</option>
+                                        <option value="Fluid Overload" {% if s3=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Swelling Of Stomach" {% if s3=="Swelling Of Stomach" %}selected{%
+                                            endif %}>Swelling Of Stomach</option>
+                                        <option value="Swelled Lymph Nodes" {% if s3=="Swelled Lymph Nodes" %}selected{%
+                                            endif %}>Swelled Lymph Nodes</option>
+                                        <option value="Malaise" {% if s3=="Malaise" %}selected{% endif %}>Malaise
+                                        </option>
+                                        <option value="Blurred And Distorted Vision" {% if
+                                            s3=="Blurred And Distorted Vision" %}selected{% endif %}>Blurred And
+                                            Distorted Vision</option>
+                                        <option value="Phlegm" {% if s3=="Phlegm" %}selected{% endif %}>Phlegm</option>
+                                        <option value="Throat Irritation" {% if s3=="Throat Irritation" %}selected{%
+                                            endif %}>Throat Irritation</option>
+                                        <option value="Redness Of Eyes" {% if s3=="Redness Of Eyes" %}selected{% endif
+                                            %}>Redness Of Eyes</option>
+                                        <option value="Sinus Pressure" {% if s3=="Sinus Pressure" %}selected{% endif %}>
+                                            Sinus Pressure</option>
+                                        <option value="Runny Nose" {% if s3=="Runny Nose" %}selected{% endif %}>Runny
+                                            Nose</option>
+                                        <option value="Congestion" {% if s3=="Congestion" %}selected{% endif %}>
+                                            Congestion</option>
+                                        <option value="Chest Pain" {% if s3=="Chest Pain" %}selected{% endif %}>Chest
+                                            Pain</option>
+                                        <option value="Weakness In Limbs" {% if s3=="Weakness In Limbs" %}selected{%
+                                            endif %}>Weakness In Limbs</option>
+                                        <option value="Fast Heart Rate" {% if s3=="Fast Heart Rate" %}selected{% endif
+                                            %}>Fast Heart Rate</option>
+                                        <option value="Pain During Bowel Movements" {% if
+                                            s3=="Pain During Bowel Movements" %}selected{% endif %}>Pain During Bowel
+                                            Movements</option>
+                                        <option value="Pain In Anal Region" {% if s3=="Pain In Anal Region" %}selected{%
+                                            endif %}>Pain In Anal Region</option>
+                                        <option value="Bloody Stool" {% if s3=="Bloody Stool" %}selected{% endif %}>
+                                            Bloody Stool</option>
+                                        <option value="Irritation In Anus" {% if s3=="Irritation In Anus" %}selected{%
+                                            endif %}>Irritation In Anus</option>
+                                        <option value="Neck Pain" {% if s3=="Neck Pain" %}selected{% endif %}>Neck Pain
+                                        </option>
+                                        <option value="Dizziness" {% if s3=="Dizziness" %}selected{% endif %}>Dizziness
+                                        </option>
+                                        <option value="Cramps" {% if s3=="Cramps" %}selected{% endif %}>Cramps</option>
+                                        <option value="Bruising" {% if s3=="Bruising" %}selected{% endif %}>Bruising
+                                        </option>
+                                        <option value="Obesity" {% if s3=="Obesity" %}selected{% endif %}>Obesity
+                                        </option>
+                                        <option value="Swollen Legs" {% if s3=="Swollen Legs" %}selected{% endif %}>
+                                            Swollen Legs</option>
+                                        <option value="Swollen Blood Vessels" {% if s3=="Swollen Blood Vessels"
+                                            %}selected{% endif %}>Swollen Blood Vessels</option>
+                                        <option value="Puffy Face And Eyes" {% if s3=="Puffy Face And Eyes" %}selected{%
+                                            endif %}>Puffy Face And Eyes</option>
+                                        <option value="Enlarged Thyroid" {% if s3=="Enlarged Thyroid" %}selected{% endif
+                                            %}>Enlarged Thyroid</option>
+                                        <option value="Brittle Nails" {% if s3=="Brittle Nails" %}selected{% endif %}>
+                                            Brittle Nails</option>
+                                        <option value="Swollen Extremeties" {% if s3=="Swollen Extremeties" %}selected{%
+                                            endif %}>Swollen Extremeties</option>
+                                        <option value="Excessive Hunger" {% if s3=="Excessive Hunger" %}selected{% endif
+                                            %}>Excessive Hunger</option>
+                                        <option value="Extra Marital Contacts" {% if s3=="Extra Marital Contacts"
+                                            %}selected{% endif %}>Extra Marital Contacts</option>
+                                        <option value="Drying And Tingling Lips" {% if s3=="Drying And Tingling Lips"
+                                            %}selected{% endif %}>Drying And Tingling Lips</option>
+                                        <option value="Slurred Speech" {% if s3=="Slurred Speech" %}selected{% endif %}>
+                                            Slurred Speech</option>
+                                        <option value="Knee Pain" {% if s3=="Knee Pain" %}selected{% endif %}>Knee Pain
+                                        </option>
+                                        <option value="Hip Joint Pain" {% if s3=="Hip Joint Pain" %}selected{% endif %}>
+                                            Hip Joint Pain</option>
+                                        <option value="Muscle Weakness" {% if s3=="Muscle Weakness" %}selected{% endif
+                                            %}>Muscle Weakness</option>
+                                        <option value="Stiff Neck" {% if s3=="Stiff Neck" %}selected{% endif %}>Stiff
+                                            Neck</option>
+                                        <option value="Swelling Joints" {% if s3=="Swelling Joints" %}selected{% endif
+                                            %}>Swelling Joints</option>
+                                        <option value="Movement Stiffness" {% if s3=="Movement Stiffness" %}selected{%
+                                            endif %}>Movement Stiffness</option>
+                                        <option value="Spinning Movements" {% if s3=="Spinning Movements" %}selected{%
+                                            endif %}>Spinning Movements</option>
+                                        <option value="Loss Of Balance" {% if s3=="Loss Of Balance" %}selected{% endif
+                                            %}>Loss Of Balance</option>
+                                        <option value="Unsteadiness" {% if s3=="Unsteadiness" %}selected{% endif %}>
+                                            Unsteadiness</option>
+                                        <option value="Weakness Of One Body Side" {% if s3=="Weakness Of One Body Side"
+                                            %}selected{% endif %}>Weakness Of One Body Side</option>
+                                        <option value="Loss Of Smell" {% if s3=="Loss Of Smell" %}selected{% endif %}>
+                                            Loss Of Smell</option>
+                                        <option value="Bladder Discomfort" {% if s3=="Bladder Discomfort" %}selected{%
+                                            endif %}>Bladder Discomfort</option>
+                                        <option value="Foul Smell Of Urine" {% if s3=="Foul Smell Of Urine" %}selected{%
+                                            endif %}>Foul Smell Of Urine</option>
+                                        <option value="Continuous Feel Of Urine" {% if s3=="Continuous Feel Of Urine"
+                                            %}selected{% endif %}>Continuous Feel Of Urine</option>
+                                        <option value="Passage Of Gases" {% if s3=="Passage Of Gases" %}selected{% endif
+                                            %}>Passage Of Gases</option>
+                                        <option value="Internal Itching" {% if s3=="Internal Itching" %}selected{% endif
+                                            %}>Internal Itching</option>
+                                        <option value="Toxic Look (Typhos)" {% if s3=="Toxic Look (Typhos)" %}selected{%
+                                            endif %}>Toxic Look (Typhos)</option>
+                                        <option value="Depression" {% if s3=="Depression" %}selected{% endif %}>
+                                            Depression</option>
+                                        <option value="Irritability" {% if s3=="Irritability" %}selected{% endif %}>
+                                            Irritability</option>
+                                        <option value="Muscle Pain" {% if s3=="Muscle Pain" %}selected{% endif %}>Muscle
+                                            Pain</option>
+                                        <option value="Altered Sensorium" {% if s3=="Altered Sensorium" %}selected{%
+                                            endif %}>Altered Sensorium</option>
+                                        <option value="Red Spots Over Body" {% if s3=="Red Spots Over Body" %}selected{%
+                                            endif %}>Red Spots Over Body</option>
+                                        <option value="Belly Pain" {% if s3=="Belly Pain" %}selected{% endif %}>Belly
+                                            Pain</option>
+                                        <option value="Abnormal Menstruation" {% if s3=="Abnormal Menstruation"
+                                            %}selected{% endif %}>Abnormal Menstruation</option>
+                                        <option value="Dischromic Patches" {% if s3=="Dischromic Patches" %}selected{%
+                                            endif %}>Dischromic Patches</option>
+                                        <option value="Watering From Eyes" {% if s3=="Watering From Eyes" %}selected{%
+                                            endif %}>Watering From Eyes</option>
+                                        <option value="Increased Appetite" {% if s3=="Increased Appetite" %}selected{%
+                                            endif %}>Increased Appetite</option>
+                                        <option value="Polyuria" {% if s3=="Polyuria" %}selected{% endif %}>Polyuria
+                                        </option>
+                                        <option value="Family History" {% if s3=="Family History" %}selected{% endif %}>
+                                            Family History</option>
+                                        <option value="Mucoid Sputum" {% if s3=="Mucoid Sputum" %}selected{% endif %}>
+                                            Mucoid Sputum</option>
+                                        <option value="Rusty Sputum" {% if s3=="Rusty Sputum" %}selected{% endif %}>
+                                            Rusty Sputum</option>
+                                        <option value="Lack Of Concentration" {% if s3=="Lack Of Concentration"
+                                            %}selected{% endif %}>Lack Of Concentration</option>
+                                        <option value="Visual Disturbances" {% if s3=="Visual Disturbances" %}selected{%
+                                            endif %}>Visual Disturbances</option>
+                                        <option value="Receiving Blood Transfusion" {% if
+                                            s3=="Receiving Blood Transfusion" %}selected{% endif %}>Receiving Blood
+                                            Transfusion</option>
+                                        <option value="Receiving Unsterile Injections" {% if
+                                            s3=="Receiving Unsterile Injections" %}selected{% endif %}>Receiving
+                                            Unsterile Injections</option>
+                                        <option value="Coma" {% if s3=="Coma" %}selected{% endif %}>Coma</option>
+                                        <option value="Stomach Bleeding" {% if s3=="Stomach Bleeding" %}selected{% endif
+                                            %}>Stomach Bleeding</option>
+                                        <option value="Distention Of Abdomen" {% if s3=="Distention Of Abdomen"
+                                            %}selected{% endif %}>Distention Of Abdomen</option>
+                                        <option value="History Of Alcohol Consumption" {% if
+                                            s3=="History Of Alcohol Consumption" %}selected{% endif %}>History Of
+                                            Alcohol Consumption</option>
+                                        <option value="Fluid Overload" {% if s3=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Blood In Sputum" {% if s3=="Blood In Sputum" %}selected{% endif
+                                            %}>Blood In Sputum</option>
+                                        <option value="Prominent Veins On Calf" {% if s3=="Prominent Veins On Calf"
+                                            %}selected{% endif %}>Prominent Veins On Calf</option>
+                                        <option value="Palpitations" {% if s3=="Palpitations" %}selected{% endif %}>
+                                            Palpitations</option>
+                                        <option value="Painful Walking" {% if s3=="Painful Walking" %}selected{% endif
+                                            %}>Painful Walking</option>
+                                        <option value="Pus Filled Pimples" {% if s3=="Pus Filled Pimples" %}selected{%
+                                            endif %}>Pus Filled Pimples</option>
+                                        <option value="Blackheads" {% if s3=="Blackheads" %}selected{% endif %}>
+                                            Blackheads</option>
+                                        <option value="Scurring" {% if s3=="Scurring" %}selected{% endif %}>Scurring
+                                        </option>
+                                        <option value="Skin Peeling" {% if s3=="Skin Peeling" %}selected{% endif %}>Skin
+                                            Peeling</option>
+                                        <option value="Silver Like Dusting" {% if s3=="Silver Like Dusting" %}selected{%
+                                            endif %}>Silver Like Dusting</option>
+                                        <option value="Small Dents In Nails" {% if s3=="Small Dents In Nails"
+                                            %}selected{% endif %}>Small Dents In Nails</option>
+                                        <option value="Inflammatory Nails" {% if s3=="Inflammatory Nails" %}selected{%
+                                            endif %}>Inflammatory Nails</option>
+                                        <option value="Blister" {% if s3=="Blister" %}selected{% endif %}>Blister
+                                        </option>
+                                        <option value="Red Sore Around Nose" {% if s3=="Red Sore Around Nose"
+                                            %}selected{% endif %}>Red Sore Around Nose</option>
+                                        <option value="Yellow Crust Ooze" {% if s3=="Yellow Crust Ooze" %}selected{%
+                                            endif %}>Yellow Crust Ooze</option>
+
                                     </select>
                                 </div>
                             </div>
@@ -88,20 +836,269 @@
                                     <h5 class="mb-1" style="font-weight: 500;">Symptom4</h5>
                                     <select class="form-select border-1 mb-2" name="ddlsymtom4">
                                         <option selected>Choose Symptom4</option>
-                                        <option value="Itching" {% if s4=="Itching" %}selected{% endif %}>
-                                            Itching</option>
+                                        <option value="Itching" {% if s4=="Itching" %}selected{% endif %}>Itching
+                                        </option>
                                         <option value="Skin Rash" {% if s4=="Skin Rash" %}selected{% endif %}>Skin Rash
                                         </option>
                                         <option value="Nodal Skin Eruptions" {% if s4=="Nodal Skin Eruptions"
-                                            %}selected{% endif %}>Nodal Skin
-                                            Eruptions</option>
+                                            %}selected{% endif %}>Nodal Skin Eruptions</option>
                                         <option value="Continuous Sneezing" {% if s4=="Continuous Sneezing" %}selected{%
-                                            endif %}>Continuous
-                                            Sneezing</option>
+                                            endif %}>Continuous Sneezing</option>
                                         <option value="Shivering" {% if s4=="Shivering" %}selected{% endif %}>Shivering
                                         </option>
-                                        <option value="Chills" {% if s4=="Chills" %}selected{% endif %}>
-                                            Chills</option>
+                                        <option value="Chills" {% if s4=="Chills" %}selected{% endif %}>Chills</option>
+                                        <option value="Joint Pain" {% if s4=="Joint Pain" %}selected{% endif %}>Joint
+                                            Pain</option>
+                                        <option value="Stomach Pain" {% if s4=="Stomach Pain" %}selected{% endif %}>
+                                            Stomach Pain</option>
+                                        <option value="Acidity" {% if s4=="Acidity" %}selected{% endif %}>Acidity
+                                        </option>
+                                        <option value="Ulcers On Tongue" {% if s4=="Ulcers On Tongue" %}selected{% endif
+                                            %}>Ulcers On Tongue</option>
+                                        <option value="Muscle Wasting" {% if s4=="Muscle Wasting" %}selected{% endif %}>
+                                            Muscle Wasting</option>
+                                        <option value="Vomiting" {% if s4=="Vomiting" %}selected{% endif %}>Vomiting
+                                        </option>
+                                        <option value="Burning Micturition" {% if s4=="Burning Micturition" %}selected{%
+                                            endif %}>Burning Micturition</option>
+                                        <option value="Spotting Urination" {% if s4=="Spotting Urination" %}selected{%
+                                            endif %}>Spotting Urination</option>
+                                        <option value="Fatigue" {% if s4=="Fatigue" %}selected{% endif %}>Fatigue
+                                        </option>
+                                        <option value="Weight Gain" {% if s4=="Weight Gain" %}selected{% endif %}>Weight
+                                            Gain</option>
+                                        <option value="Anxiety" {% if s4=="Anxiety" %}selected{% endif %}>Anxiety
+                                        </option>
+                                        <option value="Cold Hands And Feets" {% if s4=="Cold Hands And Feets"
+                                            %}selected{% endif %}>Cold Hands And Feets</option>
+                                        <option value="Mood Swings" {% if s4=="Mood Swings" %}selected{% endif %}>Mood
+                                            Swings</option>
+                                        <option value="Weight Loss" {% if s4=="Weight Loss" %}selected{% endif %}>Weight
+                                            Loss</option>
+                                        <option value="Restlessness" {% if s4=="Restlessness" %}selected{% endif %}>
+                                            Restlessness</option>
+                                        <option value="Lethargy" {% if s4=="Lethargy" %}selected{% endif %}>Lethargy
+                                        </option>
+                                        <option value="Patches In Throat" {% if s4=="Patches In Throat" %}selected{%
+                                            endif %}>Patches In Throat</option>
+                                        <option value="Irregular Sugar Level" {% if s4=="Irregular Sugar Level"
+                                            %}selected{% endif %}>Irregular Sugar Level</option>
+                                        <option value="Cough" {% if s4=="Cough" %}selected{% endif %}>Cough</option>
+                                        <option value="High Fever" {% if s4=="High Fever" %}selected{% endif %}>High
+                                            Fever</option>
+                                        <option value="Sunken Eyes" {% if s4=="Sunken Eyes" %}selected{% endif %}>Sunken
+                                            Eyes</option>
+                                        <option value="Breathlessness" {% if s4=="Breathlessness" %}selected{% endif %}>
+                                            Breathlessness</option>
+                                        <option value="Sweating" {% if s4=="Sweating" %}selected{% endif %}>Sweating
+                                        </option>
+                                        <option value="Dehydration" {% if s4=="Dehydration" %}selected{% endif %}>
+                                            Dehydration</option>
+                                        <option value="Indigestion" {% if s4=="Indigestion" %}selected{% endif %}>
+                                            Indigestion</option>
+                                        <option value="Headache" {% if s4=="Headache" %}selected{% endif %}>Headache
+                                        </option>
+                                        <option value="Yellowish Skin" {% if s4=="Yellowish Skin" %}selected{% endif %}>
+                                            Yellowish Skin</option>
+                                        <option value="Dark Urine" {% if s4=="Dark Urine" %}selected{% endif %}>Dark
+                                            Urine</option>
+                                        <option value="Nausea" {% if s4=="Nausea" %}selected{% endif %}>Nausea</option>
+                                        <option value="Loss Of Appetite" {% if s4=="Loss Of Appetite" %}selected{% endif
+                                            %}>Loss Of Appetite</option>
+                                        <option value="Pain Behind The Eyes" {% if s4=="Pain Behind The Eyes"
+                                            %}selected{% endif %}>Pain Behind The Eyes</option>
+                                        <option value="Back Pain" {% if s4=="Back Pain" %}selected{% endif %}>Back Pain
+                                        </option>
+                                        <option value="Constipation" {% if s4=="Constipation" %}selected{% endif %}>
+                                            Constipation</option>
+                                        <option value="Abdominal Pain" {% if s4=="Abdominal Pain" %}selected{% endif %}>
+                                            Abdominal Pain</option>
+                                        <option value="Diarrhoea" {% if s4=="Diarrhoea" %}selected{% endif %}>Diarrhoea
+                                        </option>
+                                        <option value="Mild Fever" {% if s4=="Mild Fever" %}selected{% endif %}>Mild
+                                            Fever</option>
+                                        <option value="Yellow Urine" {% if s4=="Yellow Urine" %}selected{% endif %}>
+                                            Yellow Urine</option>
+                                        <option value="Yellowing Of Eyes" {% if s4=="Yellowing Of Eyes" %}selected{%
+                                            endif %}>Yellowing Of Eyes</option>
+                                        <option value="Acute Liver Failure" {% if s4=="Acute Liver Failure" %}selected{%
+                                            endif %}>Acute Liver Failure</option>
+                                        <option value="Fluid Overload" {% if s4=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Swelling Of Stomach" {% if s4=="Swelling Of Stomach" %}selected{%
+                                            endif %}>Swelling Of Stomach</option>
+                                        <option value="Swelled Lymph Nodes" {% if s4=="Swelled Lymph Nodes" %}selected{%
+                                            endif %}>Swelled Lymph Nodes</option>
+                                        <option value="Malaise" {% if s4=="Malaise" %}selected{% endif %}>Malaise
+                                        </option>
+                                        <option value="Blurred And Distorted Vision" {% if
+                                            s4=="Blurred And Distorted Vision" %}selected{% endif %}>Blurred And
+                                            Distorted Vision</option>
+                                        <option value="Phlegm" {% if s4=="Phlegm" %}selected{% endif %}>Phlegm</option>
+                                        <option value="Throat Irritation" {% if s4=="Throat Irritation" %}selected{%
+                                            endif %}>Throat Irritation</option>
+                                        <option value="Redness Of Eyes" {% if s4=="Redness Of Eyes" %}selected{% endif
+                                            %}>Redness Of Eyes</option>
+                                        <option value="Sinus Pressure" {% if s4=="Sinus Pressure" %}selected{% endif %}>
+                                            Sinus Pressure</option>
+                                        <option value="Runny Nose" {% if s4=="Runny Nose" %}selected{% endif %}>Runny
+                                            Nose</option>
+                                        <option value="Congestion" {% if s4=="Congestion" %}selected{% endif %}>
+                                            Congestion</option>
+                                        <option value="Chest Pain" {% if s4=="Chest Pain" %}selected{% endif %}>Chest
+                                            Pain</option>
+                                        <option value="Weakness In Limbs" {% if s4=="Weakness In Limbs" %}selected{%
+                                            endif %}>Weakness In Limbs</option>
+                                        <option value="Fast Heart Rate" {% if s4=="Fast Heart Rate" %}selected{% endif
+                                            %}>Fast Heart Rate</option>
+                                        <option value="Pain During Bowel Movements" {% if
+                                            s4=="Pain During Bowel Movements" %}selected{% endif %}>Pain During Bowel
+                                            Movements</option>
+                                        <option value="Pain In Anal Region" {% if s4=="Pain In Anal Region" %}selected{%
+                                            endif %}>Pain In Anal Region</option>
+                                        <option value="Bloody Stool" {% if s4=="Bloody Stool" %}selected{% endif %}>
+                                            Bloody Stool</option>
+                                        <option value="Irritation In Anus" {% if s4=="Irritation In Anus" %}selected{%
+                                            endif %}>Irritation In Anus</option>
+                                        <option value="Neck Pain" {% if s4=="Neck Pain" %}selected{% endif %}>Neck Pain
+                                        </option>
+                                        <option value="Dizziness" {% if s4=="Dizziness" %}selected{% endif %}>Dizziness
+                                        </option>
+                                        <option value="Cramps" {% if s4=="Cramps" %}selected{% endif %}>Cramps</option>
+                                        <option value="Bruising" {% if s4=="Bruising" %}selected{% endif %}>Bruising
+                                        </option>
+                                        <option value="Obesity" {% if s4=="Obesity" %}selected{% endif %}>Obesity
+                                        </option>
+                                        <option value="Swollen Legs" {% if s4=="Swollen Legs" %}selected{% endif %}>
+                                            Swollen Legs</option>
+                                        <option value="Swollen Blood Vessels" {% if s4=="Swollen Blood Vessels"
+                                            %}selected{% endif %}>Swollen Blood Vessels</option>
+                                        <option value="Puffy Face And Eyes" {% if s4=="Puffy Face And Eyes" %}selected{%
+                                            endif %}>Puffy Face And Eyes</option>
+                                        <option value="Enlarged Thyroid" {% if s4=="Enlarged Thyroid" %}selected{% endif
+                                            %}>Enlarged Thyroid</option>
+                                        <option value="Brittle Nails" {% if s4=="Brittle Nails" %}selected{% endif %}>
+                                            Brittle Nails</option>
+                                        <option value="Swollen Extremeties" {% if s4=="Swollen Extremeties" %}selected{%
+                                            endif %}>Swollen Extremeties</option>
+                                        <option value="Excessive Hunger" {% if s4=="Excessive Hunger" %}selected{% endif
+                                            %}>Excessive Hunger</option>
+                                        <option value="Extra Marital Contacts" {% if s4=="Extra Marital Contacts"
+                                            %}selected{% endif %}>Extra Marital Contacts</option>
+                                        <option value="Drying And Tingling Lips" {% if s4=="Drying And Tingling Lips"
+                                            %}selected{% endif %}>Drying And Tingling Lips</option>
+                                        <option value="Slurred Speech" {% if s4=="Slurred Speech" %}selected{% endif %}>
+                                            Slurred Speech</option>
+                                        <option value="Knee Pain" {% if s4=="Knee Pain" %}selected{% endif %}>Knee Pain
+                                        </option>
+                                        <option value="Hip Joint Pain" {% if s4=="Hip Joint Pain" %}selected{% endif %}>
+                                            Hip Joint Pain</option>
+                                        <option value="Muscle Weakness" {% if s4=="Muscle Weakness" %}selected{% endif
+                                            %}>Muscle Weakness</option>
+                                        <option value="Stiff Neck" {% if s4=="Stiff Neck" %}selected{% endif %}>Stiff
+                                            Neck</option>
+                                        <option value="Swelling Joints" {% if s4=="Swelling Joints" %}selected{% endif
+                                            %}>Swelling Joints</option>
+                                        <option value="Movement Stiffness" {% if s4=="Movement Stiffness" %}selected{%
+                                            endif %}>Movement Stiffness</option>
+                                        <option value="Spinning Movements" {% if s4=="Spinning Movements" %}selected{%
+                                            endif %}>Spinning Movements</option>
+                                        <option value="Loss Of Balance" {% if s4=="Loss Of Balance" %}selected{% endif
+                                            %}>Loss Of Balance</option>
+                                        <option value="Unsteadiness" {% if s4=="Unsteadiness" %}selected{% endif %}>
+                                            Unsteadiness</option>
+                                        <option value="Weakness Of One Body Side" {% if s4=="Weakness Of One Body Side"
+                                            %}selected{% endif %}>Weakness Of One Body Side</option>
+                                        <option value="Loss Of Smell" {% if s4=="Loss Of Smell" %}selected{% endif %}>
+                                            Loss Of Smell</option>
+                                        <option value="Bladder Discomfort" {% if s4=="Bladder Discomfort" %}selected{%
+                                            endif %}>Bladder Discomfort</option>
+                                        <option value="Foul Smell Of Urine" {% if s4=="Foul Smell Of Urine" %}selected{%
+                                            endif %}>Foul Smell Of Urine</option>
+                                        <option value="Continuous Feel Of Urine" {% if s4=="Continuous Feel Of Urine"
+                                            %}selected{% endif %}>Continuous Feel Of Urine</option>
+                                        <option value="Passage Of Gases" {% if s4=="Passage Of Gases" %}selected{% endif
+                                            %}>Passage Of Gases</option>
+                                        <option value="Internal Itching" {% if s4=="Internal Itching" %}selected{% endif
+                                            %}>Internal Itching</option>
+                                        <option value="Toxic Look (Typhos)" {% if s4=="Toxic Look (Typhos)" %}selected{%
+                                            endif %}>Toxic Look (Typhos)</option>
+                                        <option value="Depression" {% if s4=="Depression" %}selected{% endif %}>
+                                            Depression</option>
+                                        <option value="Irritability" {% if s4=="Irritability" %}selected{% endif %}>
+                                            Irritability</option>
+                                        <option value="Muscle Pain" {% if s4=="Muscle Pain" %}selected{% endif %}>Muscle
+                                            Pain</option>
+                                        <option value="Altered Sensorium" {% if s4=="Altered Sensorium" %}selected{%
+                                            endif %}>Altered Sensorium</option>
+                                        <option value="Red Spots Over Body" {% if s4=="Red Spots Over Body" %}selected{%
+                                            endif %}>Red Spots Over Body</option>
+                                        <option value="Belly Pain" {% if s4=="Belly Pain" %}selected{% endif %}>Belly
+                                            Pain</option>
+                                        <option value="Abnormal Menstruation" {% if s4=="Abnormal Menstruation"
+                                            %}selected{% endif %}>Abnormal Menstruation</option>
+                                        <option value="Dischromic Patches" {% if s4=="Dischromic Patches" %}selected{%
+                                            endif %}>Dischromic Patches</option>
+                                        <option value="Watering From Eyes" {% if s4=="Watering From Eyes" %}selected{%
+                                            endif %}>Watering From Eyes</option>
+                                        <option value="Increased Appetite" {% if s4=="Increased Appetite" %}selected{%
+                                            endif %}>Increased Appetite</option>
+                                        <option value="Polyuria" {% if s4=="Polyuria" %}selected{% endif %}>Polyuria
+                                        </option>
+                                        <option value="Family History" {% if s4=="Family History" %}selected{% endif %}>
+                                            Family History</option>
+                                        <option value="Mucoid Sputum" {% if s4=="Mucoid Sputum" %}selected{% endif %}>
+                                            Mucoid Sputum</option>
+                                        <option value="Rusty Sputum" {% if s4=="Rusty Sputum" %}selected{% endif %}>
+                                            Rusty Sputum</option>
+                                        <option value="Lack Of Concentration" {% if s4=="Lack Of Concentration"
+                                            %}selected{% endif %}>Lack Of Concentration</option>
+                                        <option value="Visual Disturbances" {% if s4=="Visual Disturbances" %}selected{%
+                                            endif %}>Visual Disturbances</option>
+                                        <option value="Receiving Blood Transfusion" {% if
+                                            s4=="Receiving Blood Transfusion" %}selected{% endif %}>Receiving Blood
+                                            Transfusion</option>
+                                        <option value="Receiving Unsterile Injections" {% if
+                                            s4=="Receiving Unsterile Injections" %}selected{% endif %}>Receiving
+                                            Unsterile Injections</option>
+                                        <option value="Coma" {% if s4=="Coma" %}selected{% endif %}>Coma</option>
+                                        <option value="Stomach Bleeding" {% if s4=="Stomach Bleeding" %}selected{% endif
+                                            %}>Stomach Bleeding</option>
+                                        <option value="Distention Of Abdomen" {% if s4=="Distention Of Abdomen"
+                                            %}selected{% endif %}>Distention Of Abdomen</option>
+                                        <option value="History Of Alcohol Consumption" {% if
+                                            s4=="History Of Alcohol Consumption" %}selected{% endif %}>History Of
+                                            Alcohol Consumption</option>
+                                        <option value="Fluid Overload" {% if s4=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Blood In Sputum" {% if s4=="Blood In Sputum" %}selected{% endif
+                                            %}>Blood In Sputum</option>
+                                        <option value="Prominent Veins On Calf" {% if s4=="Prominent Veins On Calf"
+                                            %}selected{% endif %}>Prominent Veins On Calf</option>
+                                        <option value="Palpitations" {% if s4=="Palpitations" %}selected{% endif %}>
+                                            Palpitations</option>
+                                        <option value="Painful Walking" {% if s4=="Painful Walking" %}selected{% endif
+                                            %}>Painful Walking</option>
+                                        <option value="Pus Filled Pimples" {% if s4=="Pus Filled Pimples" %}selected{%
+                                            endif %}>Pus Filled Pimples</option>
+                                        <option value="Blackheads" {% if s4=="Blackheads" %}selected{% endif %}>
+                                            Blackheads</option>
+                                        <option value="Scurring" {% if s4=="Scurring" %}selected{% endif %}>Scurring
+                                        </option>
+                                        <option value="Skin Peeling" {% if s4=="Skin Peeling" %}selected{% endif %}>Skin
+                                            Peeling</option>
+                                        <option value="Silver Like Dusting" {% if s4=="Silver Like Dusting" %}selected{%
+                                            endif %}>Silver Like Dusting</option>
+                                        <option value="Small Dents In Nails" {% if s4=="Small Dents In Nails"
+                                            %}selected{% endif %}>Small Dents In Nails</option>
+                                        <option value="Inflammatory Nails" {% if s4=="Inflammatory Nails" %}selected{%
+                                            endif %}>Inflammatory Nails</option>
+                                        <option value="Blister" {% if s4=="Blister" %}selected{% endif %}>Blister
+                                        </option>
+                                        <option value="Red Sore Around Nose" {% if s4=="Red Sore Around Nose"
+                                            %}selected{% endif %}>Red Sore Around Nose</option>
+                                        <option value="Yellow Crust Ooze" {% if s4=="Yellow Crust Ooze" %}selected{%
+                                            endif %}>Yellow Crust Ooze</option>
                                     </select>
                                 </div>
                             </div>
@@ -110,20 +1107,270 @@
                                     <h5 class="mb-1" style="font-weight: 500;">Symptom5</h5>
                                     <select class="form-select border-1" name="ddlsymtom5">
                                         <option selected>Choose Symptom5</option>
-                                        <option value="Itching" {% if s5=="Itching" %}selected{% endif %}>
-                                            Itching</option>
+                                        <option value="Itching" {% if s5=="Itching" %}selected{% endif %}>Itching
+                                        </option>
                                         <option value="Skin Rash" {% if s5=="Skin Rash" %}selected{% endif %}>Skin Rash
                                         </option>
                                         <option value="Nodal Skin Eruptions" {% if s5=="Nodal Skin Eruptions"
-                                            %}selected{% endif %}>Nodal Skin
-                                            Eruptions</option>
+                                            %}selected{% endif %}>Nodal Skin Eruptions</option>
                                         <option value="Continuous Sneezing" {% if s5=="Continuous Sneezing" %}selected{%
-                                            endif %}>Continuous
-                                            Sneezing</option>
+                                            endif %}>Continuous Sneezing</option>
                                         <option value="Shivering" {% if s5=="Shivering" %}selected{% endif %}>Shivering
                                         </option>
-                                        <option value="Chills" {% if s5=="Chills" %}selected{% endif %}>
-                                            Chills</option>
+                                        <option value="Chills" {% if s5=="Chills" %}selected{% endif %}>Chills</option>
+                                        <option value="Joint Pain" {% if s5=="Joint Pain" %}selected{% endif %}>Joint
+                                            Pain</option>
+                                        <option value="Stomach Pain" {% if s5=="Stomach Pain" %}selected{% endif %}>
+                                            Stomach Pain</option>
+                                        <option value="Acidity" {% if s5=="Acidity" %}selected{% endif %}>Acidity
+                                        </option>
+                                        <option value="Ulcers On Tongue" {% if s5=="Ulcers On Tongue" %}selected{% endif
+                                            %}>Ulcers On Tongue</option>
+                                        <option value="Muscle Wasting" {% if s5=="Muscle Wasting" %}selected{% endif %}>
+                                            Muscle Wasting</option>
+                                        <option value="Vomiting" {% if s5=="Vomiting" %}selected{% endif %}>Vomiting
+                                        </option>
+                                        <option value="Burning Micturition" {% if s5=="Burning Micturition" %}selected{%
+                                            endif %}>Burning Micturition</option>
+                                        <option value="Spotting Urination" {% if s5=="Spotting Urination" %}selected{%
+                                            endif %}>Spotting Urination</option>
+                                        <option value="Fatigue" {% if s5=="Fatigue" %}selected{% endif %}>Fatigue
+                                        </option>
+                                        <option value="Weight Gain" {% if s5=="Weight Gain" %}selected{% endif %}>Weight
+                                            Gain</option>
+                                        <option value="Anxiety" {% if s5=="Anxiety" %}selected{% endif %}>Anxiety
+                                        </option>
+                                        <option value="Cold Hands And Feets" {% if s5=="Cold Hands And Feets"
+                                            %}selected{% endif %}>Cold Hands And Feets</option>
+                                        <option value="Mood Swings" {% if s5=="Mood Swings" %}selected{% endif %}>Mood
+                                            Swings</option>
+                                        <option value="Weight Loss" {% if s5=="Weight Loss" %}selected{% endif %}>Weight
+                                            Loss</option>
+                                        <option value="Restlessness" {% if s5=="Restlessness" %}selected{% endif %}>
+                                            Restlessness</option>
+                                        <option value="Lethargy" {% if s5=="Lethargy" %}selected{% endif %}>Lethargy
+                                        </option>
+                                        <option value="Patches In Throat" {% if s5=="Patches In Throat" %}selected{%
+                                            endif %}>Patches In Throat</option>
+                                        <option value="Irregular Sugar Level" {% if s5=="Irregular Sugar Level"
+                                            %}selected{% endif %}>Irregular Sugar Level</option>
+                                        <option value="Cough" {% if s5=="Cough" %}selected{% endif %}>Cough</option>
+                                        <option value="High Fever" {% if s5=="High Fever" %}selected{% endif %}>High
+                                            Fever</option>
+                                        <option value="Sunken Eyes" {% if s5=="Sunken Eyes" %}selected{% endif %}>Sunken
+                                            Eyes</option>
+                                        <option value="Breathlessness" {% if s5=="Breathlessness" %}selected{% endif %}>
+                                            Breathlessness</option>
+                                        <option value="Sweating" {% if s5=="Sweating" %}selected{% endif %}>Sweating
+                                        </option>
+                                        <option value="Dehydration" {% if s5=="Dehydration" %}selected{% endif %}>
+                                            Dehydration</option>
+                                        <option value="Indigestion" {% if s5=="Indigestion" %}selected{% endif %}>
+                                            Indigestion</option>
+                                        <option value="Headache" {% if s5=="Headache" %}selected{% endif %}>Headache
+                                        </option>
+                                        <option value="Yellowish Skin" {% if s5=="Yellowish Skin" %}selected{% endif %}>
+                                            Yellowish Skin</option>
+                                        <option value="Dark Urine" {% if s5=="Dark Urine" %}selected{% endif %}>Dark
+                                            Urine</option>
+                                        <option value="Nausea" {% if s5=="Nausea" %}selected{% endif %}>Nausea</option>
+                                        <option value="Loss Of Appetite" {% if s5=="Loss Of Appetite" %}selected{% endif
+                                            %}>Loss Of Appetite</option>
+                                        <option value="Pain Behind The Eyes" {% if s5=="Pain Behind The Eyes"
+                                            %}selected{% endif %}>Pain Behind The Eyes</option>
+                                        <option value="Back Pain" {% if s5=="Back Pain" %}selected{% endif %}>Back Pain
+                                        </option>
+                                        <option value="Constipation" {% if s5=="Constipation" %}selected{% endif %}>
+                                            Constipation</option>
+                                        <option value="Abdominal Pain" {% if s5=="Abdominal Pain" %}selected{% endif %}>
+                                            Abdominal Pain</option>
+                                        <option value="Diarrhoea" {% if s5=="Diarrhoea" %}selected{% endif %}>Diarrhoea
+                                        </option>
+                                        <option value="Mild Fever" {% if s5=="Mild Fever" %}selected{% endif %}>Mild
+                                            Fever</option>
+                                        <option value="Yellow Urine" {% if s5=="Yellow Urine" %}selected{% endif %}>
+                                            Yellow Urine</option>
+                                        <option value="Yellowing Of Eyes" {% if s5=="Yellowing Of Eyes" %}selected{%
+                                            endif %}>Yellowing Of Eyes</option>
+                                        <option value="Acute Liver Failure" {% if s5=="Acute Liver Failure" %}selected{%
+                                            endif %}>Acute Liver Failure</option>
+                                        <option value="Fluid Overload" {% if s5=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Swelling Of Stomach" {% if s5=="Swelling Of Stomach" %}selected{%
+                                            endif %}>Swelling Of Stomach</option>
+                                        <option value="Swelled Lymph Nodes" {% if s5=="Swelled Lymph Nodes" %}selected{%
+                                            endif %}>Swelled Lymph Nodes</option>
+                                        <option value="Malaise" {% if s5=="Malaise" %}selected{% endif %}>Malaise
+                                        </option>
+                                        <option value="Blurred And Distorted Vision" {% if
+                                            s5=="Blurred And Distorted Vision" %}selected{% endif %}>Blurred And
+                                            Distorted Vision</option>
+                                        <option value="Phlegm" {% if s5=="Phlegm" %}selected{% endif %}>Phlegm</option>
+                                        <option value="Throat Irritation" {% if s5=="Throat Irritation" %}selected{%
+                                            endif %}>Throat Irritation</option>
+                                        <option value="Redness Of Eyes" {% if s5=="Redness Of Eyes" %}selected{% endif
+                                            %}>Redness Of Eyes</option>
+                                        <option value="Sinus Pressure" {% if s5=="Sinus Pressure" %}selected{% endif %}>
+                                            Sinus Pressure</option>
+                                        <option value="Runny Nose" {% if s5=="Runny Nose" %}selected{% endif %}>Runny
+                                            Nose</option>
+                                        <option value="Congestion" {% if s5=="Congestion" %}selected{% endif %}>
+                                            Congestion</option>
+                                        <option value="Chest Pain" {% if s5=="Chest Pain" %}selected{% endif %}>Chest
+                                            Pain</option>
+                                        <option value="Weakness In Limbs" {% if s5=="Weakness In Limbs" %}selected{%
+                                            endif %}>Weakness In Limbs</option>
+                                        <option value="Fast Heart Rate" {% if s5=="Fast Heart Rate" %}selected{% endif
+                                            %}>Fast Heart Rate</option>
+                                        <option value="Pain During Bowel Movements" {% if
+                                            s5=="Pain During Bowel Movements" %}selected{% endif %}>Pain During Bowel
+                                            Movements</option>
+                                        <option value="Pain In Anal Region" {% if s5=="Pain In Anal Region" %}selected{%
+                                            endif %}>Pain In Anal Region</option>
+                                        <option value="Bloody Stool" {% if s5=="Bloody Stool" %}selected{% endif %}>
+                                            Bloody Stool</option>
+                                        <option value="Irritation In Anus" {% if s5=="Irritation In Anus" %}selected{%
+                                            endif %}>Irritation In Anus</option>
+                                        <option value="Neck Pain" {% if s5=="Neck Pain" %}selected{% endif %}>Neck Pain
+                                        </option>
+                                        <option value="Dizziness" {% if s5=="Dizziness" %}selected{% endif %}>Dizziness
+                                        </option>
+                                        <option value="Cramps" {% if s5=="Cramps" %}selected{% endif %}>Cramps</option>
+                                        <option value="Bruising" {% if s5=="Bruising" %}selected{% endif %}>Bruising
+                                        </option>
+                                        <option value="Obesity" {% if s5=="Obesity" %}selected{% endif %}>Obesity
+                                        </option>
+                                        <option value="Swollen Legs" {% if s5=="Swollen Legs" %}selected{% endif %}>
+                                            Swollen Legs</option>
+                                        <option value="Swollen Blood Vessels" {% if s5=="Swollen Blood Vessels"
+                                            %}selected{% endif %}>Swollen Blood Vessels</option>
+                                        <option value="Puffy Face And Eyes" {% if s5=="Puffy Face And Eyes" %}selected{%
+                                            endif %}>Puffy Face And Eyes</option>
+                                        <option value="Enlarged Thyroid" {% if s5=="Enlarged Thyroid" %}selected{% endif
+                                            %}>Enlarged Thyroid</option>
+                                        <option value="Brittle Nails" {% if s5=="Brittle Nails" %}selected{% endif %}>
+                                            Brittle Nails</option>
+                                        <option value="Swollen Extremeties" {% if s5=="Swollen Extremeties" %}selected{%
+                                            endif %}>Swollen Extremeties</option>
+                                        <option value="Excessive Hunger" {% if s5=="Excessive Hunger" %}selected{% endif
+                                            %}>Excessive Hunger</option>
+                                        <option value="Extra Marital Contacts" {% if s5=="Extra Marital Contacts"
+                                            %}selected{% endif %}>Extra Marital Contacts</option>
+                                        <option value="Drying And Tingling Lips" {% if s5=="Drying And Tingling Lips"
+                                            %}selected{% endif %}>Drying And Tingling Lips</option>
+                                        <option value="Slurred Speech" {% if s5=="Slurred Speech" %}selected{% endif %}>
+                                            Slurred Speech</option>
+                                        <option value="Knee Pain" {% if s5=="Knee Pain" %}selected{% endif %}>Knee Pain
+                                        </option>
+                                        <option value="Hip Joint Pain" {% if s5=="Hip Joint Pain" %}selected{% endif %}>
+                                            Hip Joint Pain</option>
+                                        <option value="Muscle Weakness" {% if s5=="Muscle Weakness" %}selected{% endif
+                                            %}>Muscle Weakness</option>
+                                        <option value="Stiff Neck" {% if s5=="Stiff Neck" %}selected{% endif %}>Stiff
+                                            Neck</option>
+                                        <option value="Swelling Joints" {% if s5=="Swelling Joints" %}selected{% endif
+                                            %}>Swelling Joints</option>
+                                        <option value="Movement Stiffness" {% if s5=="Movement Stiffness" %}selected{%
+                                            endif %}>Movement Stiffness</option>
+                                        <option value="Spinning Movements" {% if s5=="Spinning Movements" %}selected{%
+                                            endif %}>Spinning Movements</option>
+                                        <option value="Loss Of Balance" {% if s5=="Loss Of Balance" %}selected{% endif
+                                            %}>Loss Of Balance</option>
+                                        <option value="Unsteadiness" {% if s5=="Unsteadiness" %}selected{% endif %}>
+                                            Unsteadiness</option>
+                                        <option value="Weakness Of One Body Side" {% if s5=="Weakness Of One Body Side"
+                                            %}selected{% endif %}>Weakness Of One Body Side</option>
+                                        <option value="Loss Of Smell" {% if s5=="Loss Of Smell" %}selected{% endif %}>
+                                            Loss Of Smell</option>
+                                        <option value="Bladder Discomfort" {% if s5=="Bladder Discomfort" %}selected{%
+                                            endif %}>Bladder Discomfort</option>
+                                        <option value="Foul Smell Of Urine" {% if s5=="Foul Smell Of Urine" %}selected{%
+                                            endif %}>Foul Smell Of Urine</option>
+                                        <option value="Continuous Feel Of Urine" {% if s5=="Continuous Feel Of Urine"
+                                            %}selected{% endif %}>Continuous Feel Of Urine</option>
+                                        <option value="Passage Of Gases" {% if s5=="Passage Of Gases" %}selected{% endif
+                                            %}>Passage Of Gases</option>
+                                        <option value="Internal Itching" {% if s5=="Internal Itching" %}selected{% endif
+                                            %}>Internal Itching</option>
+                                        <option value="Toxic Look (Typhos)" {% if s5=="Toxic Look (Typhos)" %}selected{%
+                                            endif %}>Toxic Look (Typhos)</option>
+                                        <option value="Depression" {% if s5=="Depression" %}selected{% endif %}>
+                                            Depression</option>
+                                        <option value="Irritability" {% if s5=="Irritability" %}selected{% endif %}>
+                                            Irritability</option>
+                                        <option value="Muscle Pain" {% if s5=="Muscle Pain" %}selected{% endif %}>Muscle
+                                            Pain</option>
+                                        <option value="Altered Sensorium" {% if s5=="Altered Sensorium" %}selected{%
+                                            endif %}>Altered Sensorium</option>
+                                        <option value="Red Spots Over Body" {% if s5=="Red Spots Over Body" %}selected{%
+                                            endif %}>Red Spots Over Body</option>
+                                        <option value="Belly Pain" {% if s5=="Belly Pain" %}selected{% endif %}>Belly
+                                            Pain</option>
+                                        <option value="Abnormal Menstruation" {% if s5=="Abnormal Menstruation"
+                                            %}selected{% endif %}>Abnormal Menstruation</option>
+                                        <option value="Dischromic Patches" {% if s5=="Dischromic Patches" %}selected{%
+                                            endif %}>Dischromic Patches</option>
+                                        <option value="Watering From Eyes" {% if s5=="Watering From Eyes" %}selected{%
+                                            endif %}>Watering From Eyes</option>
+                                        <option value="Increased Appetite" {% if s5=="Increased Appetite" %}selected{%
+                                            endif %}>Increased Appetite</option>
+                                        <option value="Polyuria" {% if s5=="Polyuria" %}selected{% endif %}>Polyuria
+                                        </option>
+                                        <option value="Family History" {% if s5=="Family History" %}selected{% endif %}>
+                                            Family History</option>
+                                        <option value="Mucoid Sputum" {% if s5=="Mucoid Sputum" %}selected{% endif %}>
+                                            Mucoid Sputum</option>
+                                        <option value="Rusty Sputum" {% if s5=="Rusty Sputum" %}selected{% endif %}>
+                                            Rusty Sputum</option>
+                                        <option value="Lack Of Concentration" {% if s5=="Lack Of Concentration"
+                                            %}selected{% endif %}>Lack Of Concentration</option>
+                                        <option value="Visual Disturbances" {% if s5=="Visual Disturbances" %}selected{%
+                                            endif %}>Visual Disturbances</option>
+                                        <option value="Receiving Blood Transfusion" {% if
+                                            s5=="Receiving Blood Transfusion" %}selected{% endif %}>Receiving Blood
+                                            Transfusion</option>
+                                        <option value="Receiving Unsterile Injections" {% if
+                                            s5=="Receiving Unsterile Injections" %}selected{% endif %}>Receiving
+                                            Unsterile Injections</option>
+                                        <option value="Coma" {% if s5=="Coma" %}selected{% endif %}>Coma</option>
+                                        <option value="Stomach Bleeding" {% if s5=="Stomach Bleeding" %}selected{% endif
+                                            %}>Stomach Bleeding</option>
+                                        <option value="Distention Of Abdomen" {% if s5=="Distention Of Abdomen"
+                                            %}selected{% endif %}>Distention Of Abdomen</option>
+                                        <option value="History Of Alcohol Consumption" {% if
+                                            s5=="History Of Alcohol Consumption" %}selected{% endif %}>History Of
+                                            Alcohol Consumption</option>
+                                        <option value="Fluid Overload" {% if s5=="Fluid Overload" %}selected{% endif %}>
+                                            Fluid Overload</option>
+                                        <option value="Blood In Sputum" {% if s5=="Blood In Sputum" %}selected{% endif
+                                            %}>Blood In Sputum</option>
+                                        <option value="Prominent Veins On Calf" {% if s5=="Prominent Veins On Calf"
+                                            %}selected{% endif %}>Prominent Veins On Calf</option>
+                                        <option value="Palpitations" {% if s5=="Palpitations" %}selected{% endif %}>
+                                            Palpitations</option>
+                                        <option value="Painful Walking" {% if s5=="Painful Walking" %}selected{% endif
+                                            %}>Painful Walking</option>
+                                        <option value="Pus Filled Pimples" {% if s5=="Pus Filled Pimples" %}selected{%
+                                            endif %}>Pus Filled Pimples</option>
+                                        <option value="Blackheads" {% if s5=="Blackheads" %}selected{% endif %}>
+                                            Blackheads</option>
+                                        <option value="Scurring" {% if s5=="Scurring" %}selected{% endif %}>Scurring
+                                        </option>
+                                        <option value="Skin Peeling" {% if s5=="Skin Peeling" %}selected{% endif %}>Skin
+                                            Peeling</option>
+                                        <option value="Silver Like Dusting" {% if s5=="Silver Like Dusting" %}selected{%
+                                            endif %}>Silver Like Dusting</option>
+                                        <option value="Small Dents In Nails" {% if s5=="Small Dents In Nails"
+                                            %}selected{% endif %}>Small Dents In Nails</option>
+                                        <option value="Inflammatory Nails" {% if s5=="Inflammatory Nails" %}selected{%
+                                            endif %}>Inflammatory Nails</option>
+                                        <option value="Blister" {% if s5=="Blister" %}selected{% endif %}>Blister
+                                        </option>
+                                        <option value="Red Sore Around Nose" {% if s5=="Red Sore Around Nose"
+                                            %}selected{% endif %}>Red Sore Around Nose</option>
+                                        <option value="Yellow Crust Ooze" {% if s5=="Yellow Crust Ooze" %}selected{%
+                                            endif %}>Yellow Crust Ooze</option>
+
                                     </select>
                                 </div>
                             </div>
@@ -147,7 +1394,8 @@
                         <div class="row">
                             <p style="font-size: 25px;color: black;font-weight: 500;">There are chances you may have</p>
                             <h4 class="text-danger">
-                                {% if final_prediction %} {{ final_prediction }} {% else %} Result is not ready. {% endif %}
+                                {% if final_prediction %} {{ final_prediction }} {% else %} Result is not ready. {%
+                                endif %}
                             </h4>
                             <p style="font-size: 25px;color: black;font-weight: 500;">Consult a doctor for the
                                 treatment.</p>
@@ -167,21 +1415,25 @@
                                     <tr>
                                         <td>1</td>
                                         <td>Random Forest Prediction</td>
-                                        <td> {% if rf_prediction %} {{ rf_prediction }} {% else %} Result is not ready. {% endif %}</td>
+                                        <td> {% if rf_prediction %} {{ rf_prediction }} {% else %} Result is not ready.
+                                            {% endif %}</td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>Naive Bayes Prediction</td>
-                                        <td> {% if nb_prediction %} {{ nb_prediction }} {% else %} Result is not ready. {% endif %}</td>
+                                        <td> {% if nb_prediction %} {{ nb_prediction }} {% else %} Result is not ready.
+                                            {% endif %}</td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>SVM Prediction</td>
-                                        <td> {% if svm_prediction %} {{ svm_prediction }} {% else %} Result is not ready. {% endif %}</td>
+                                        <td> {% if svm_prediction %} {{ svm_prediction }} {% else %} Result is not
+                                            ready. {% endif %}</td>
                                     </tr>
                                     <tr style="background-color: #c7e9fd;font-weight: 500;">
                                         <td class="text-center" colspan="2">Final Prediction</td>
-                                        <td> {% if final_prediction %} {{ final_prediction }} {% else %} Result is not ready. {% endif %}</td>
+                                        <td> {% if final_prediction %} {{ final_prediction }} {% else %} Result is not
+                                            ready. {% endif %}</td>
                                     </tr>
                                 </table>
                             </div>
@@ -199,17 +1451,17 @@
     <p class="text-dark mt-3">Hello, <b class="text-danger"> {{ username }} </b></p>
 </div>
 {% endif %} -->
-<div class="container text-center" >
+<div class="container text-center">
     <!-- <p> Logged out successfully. </p> -->
-{% with messages = get_flashed_messages(with_categories=true) %}
-{% if messages %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
 
     {% for category, message in messages %}
     <p class="{{ category }}">{{ message }}</p>
     {% endfor %}
 
-{% endif %}
-{% endwith %}
+    {% endif %}
+    {% endwith %}
 </div>
 
 {% endblock body %}

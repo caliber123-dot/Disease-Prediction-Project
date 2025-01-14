@@ -8,9 +8,11 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import desc 
 from datetime import datetime
 from waitress import serve
 import pytz
+import mail as eMail
 
 app = Flask(__name__)
 
@@ -60,18 +62,82 @@ india_timezone = pytz.timezone('Asia/Kolkata')
 
 @app.route('/')
 def index():
-    # all_data = Register.query.all()
-    # print(all_data)
    return render_template('index.html')
 
+@app.route('/demo') # For Table Testing
+def demo():
+   return render_template('demo.html')
+
+# @app.route('/appoint' , methods=['GET']) 
+# def appoint():
+#     # query_string = request.query_string
+#     id = request.args.get('aa')
+#     print((id))
+#     return render_template('appoint.html')
+
+@app.route('/appoint/<int:pr_id>', methods=['GET', 'POST']) 
+def appoint(pr_id):
+    if request.method == 'POST':
+        txtname = request.form['txtname']
+        txtemail = request.form['txtemail']
+        txtphone = request.form['txtphone']
+        txtdesc = request.form['txtdesc']
+        txtdate = request.form.get('txtdate')
+        txttime = request.form.get('txttime')
+        # print("Name: ", txtname)
+        # print("email: ", txtemail)
+        # print("phone: ", txtphone)
+        # print("desc: ", txtdesc)
+        
+        parsed_date = datetime.strptime(txtdate, "%Y-%m-%d")
+        formatted_date = parsed_date.strftime("%d-%m-%Y")
+        # print("date:::: ", formatted_date)
+        # print("time:::: ", txttime)
+        subject = "Appointment Request with [Doctor's Name or Specialty]"
+        body = "Dear [Clinic Name/Receptionist’s Name],<br /><br />"
+        body = body + "I hope this message finds you well. I am writing to request an appointment with Dr. [Doctor's Name] for " + txtname + ".<br />"
+        body = body + "<p><b>Personal Information:</b></p>"
+        body = body + "<ul>" 
+        body = body + "<li>Name: " + txtname + "</li>"
+        body = body + "<li>Phone: " + txtphone + "</li>"
+        body = body + "<li>Email: " + txtemail + "</li>"
+        body = body + "<li>Preferred Date: " + formatted_date + "</li>"
+        body = body + "<li>Preferred Time: " + txttime + "</li></ul>"
+        body = body + "<p><b>Reason for Visit:</b></p>"
+        body = body + "<ul><li>" + txtdesc + "</li></ul>"
+        body = body + "Please let me know if the requested time is available or if other slots are open. I appreciate your assistance and look forward to your confirmation." + "<br/><br/>"
+        body = body + "Thank you for your time and support." + "<br/><br/>"
+        body = body + "Best regards," + "<br/>"
+        body = body + txtname + "<br/>"
+        body = body + "M." + txtphone + "<br/>"
+        
+        sender = "caliberai123@gmail.com" #From
+        recipients = [txtemail] # To
+        password = "ucoz pkvc cumx moak" # App Password https://myaccount.google.com/apppasswords
+        rmsg = eMail.send_email(subject, body, sender, recipients, password)
+        # return render_template('appoint.html', user='', desc = '')
+        if (rmsg == 1):
+            flash('Email has been sent to ' + txtemail, 'success')
+        return redirect(url_for('history'))
+    else:
+        predict = predict_tbl.query.filter_by(pr_id=pr_id).first()
+        if predict:
+            user = reg_tbl.query.filter_by(rg_id=predict.pr_rg_id).first()
+            # print(user.rg_email)
+            output_symptoms = predict.pr_symptoms.replace(",", ", ")
+            desc = "My symptoms are " + output_symptoms + ". Based on these symptoms, the system predicts that the disease might be " + predict.pr_disease + "."
+            return render_template('appoint.html', user=user , desc = desc)  
+        else:  
+            return render_template('appoint.html', user='', desc = '')
+            
+    
 @app.route('/history')
 def history():
     if 'user' in session:
-        flash(session['user'], 'success')
-        # allTodo = predict_tbl.query.all()
-        # Query all records where pr_rg_id = 1
-        allTodo = predict_tbl.query.filter_by(pr_rg_id=session['user_id']).all()
-        return render_template('history.html', allTodo=allTodo)
+        # flash(session['user'], 'success')
+        msg = session['user'] + " Prediction History:"
+        allTodo = predict_tbl.query.filter_by(pr_rg_id=session['user_id']).order_by(desc(predict_tbl.pr_id)).all()
+        return render_template('history.html', allTodo=allTodo, msg = msg )
     else:
         return render_template('history.html')
 
@@ -104,7 +170,7 @@ def success():
     if 'user' in session:
         return render_template('predict.html', username=session['user'])
     else:
-        flash('Your session has expired.', 'warning')
+        flash('You are not logged in.', 'error')
     return redirect(url_for('sign_in'))
 
 @app.route('/logout')

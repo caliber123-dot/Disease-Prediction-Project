@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %} Home{% endblock title %}
+{% block body %}
+
+<!-- Appointment Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
+                <h1 class="mb-4">Draft An Appointment To Visit Doctor</h1>
+                <p class="mb-4">Our team is here to provide you with exceptional care tailored to your needs. Booking an
+                    appointment with our experienced doctor is simple and convenient. Whether you require a routine
+                    check-up, follow-up consultation, or assistance with a specific health concern, we are ready to
+                    help.</p>
+                <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
+                        style="width: 55px; height: 55px;">
+                        <i class="fa fa-phone-alt text-primary"></i>
+                    </div>
+                    <div class="ms-4">
+                        <p class="mb-2">Call Us Now</p>
+                        <h5 class="mb-0">800-225-0241</h5>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-light rounded h-100 d-flex align-items-center p-5">
+                    <form action="/appoint/1" method="POST">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-12">
+                                <input type="text" required class="form-control border-1 p-2" value="{{user.rg_name}}" name="txtname" placeholder="Your Name" >
+                                                               
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" required class="form-control border-1 p-2" value="{{user.rg_email}}" name="txtemail" placeholder="Your Email">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" required class="form-control border-1 p-2" value="{{user.rg_phone}}" name="txtphone" placeholder="Your Mobile">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control border-1" rows="3" required
+                                 name="txtdesc" placeholder="Describe your problem">{{desc}}</textarea>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="date" id="date" data-target-input="nearest">
+                                    <input type="date" class="form-control border-1 p-2 datetimepicker-input" required
+                                    name="txtdate" placeholder="Choose Date" data-target="#date1" data-toggle="datetimepicker1">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="time" id="time" data-target-input="nearest">
+                                    <input type="time" class="form-control border-1 p-2 datetimepicker-input" required
+                                    name="txttime" placeholder="Choose Time" data-target="#time1" data-toggle="datetimepicker1">
+                                </div>
+                            </div>
+                           
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-2" type="submit">Draft Appointment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Appointment End -->
+
+{% endblock body %}
