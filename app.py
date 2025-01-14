@@ -64,6 +64,14 @@ india_timezone = pytz.timezone('Asia/Kolkata')
 def index():
    return render_template('index.html')
 
+@app.route('/ppt') 
+def ppt():
+   return render_template('ppt.html')
+
+@app.route('/report')
+def report():
+   return render_template('report.html')
+
 @app.route('/demo') # For Table Testing
 def demo():
    return render_template('demo.html')
