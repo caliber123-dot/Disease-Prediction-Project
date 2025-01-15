@@ -1,7 +1,43 @@
 {% extends 'base.html' %}
 {% block title %} Home{% endblock title %}
 {% block body %}
+<style>
+    input:invalid {
+        border: 2px solid red;
+    }
 
+    input:valid {
+        border: 2px solid green;
+    }
+</style>
+<script>
+    function myValidate() {
+        const dateInput = document.getElementById('dateInput').value;
+        const errorMessage = document.getElementById('errorMessage');
+        // Regular expression to match dd-mm-yyyy
+        const dateRegex = /^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(\d{4})$/;
+
+        // const dateValue = this.value; // ISO format: yyyy-mm-dd
+        if (dateInput) {
+            const [year, month, day] = dateInput.split('-');
+            const formattedDate = `${day}-${month}-${year}`;
+            console.log('Formatted Date:', formattedDate); // You can use this for further processing
+            // alert(formattedDate)
+            if (dateRegex.test(formattedDate)) {
+                errorMessage.style.display = 'none'; // Hide error message
+                // alert('Valid');
+                return true;
+            }
+            else {
+                errorMessage.style.display = 'inline'; // Show error message
+                // alert('In-valid');
+                return false // Prevent form submission
+            }
+        }
+    }
+
+
+</script>
 <!-- Appointment Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -27,37 +63,45 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="bg-light rounded h-100 d-flex align-items-center p-5">
-                    <form action="/appoint/1" method="POST">
+                    <form action="/appoint/1" method="POST" id="dateForm">
                         <div class="row g-3">
                             <div class="col-12 col-sm-12">
-                                <input type="text" required class="form-control border-1 p-2" value="{{user.rg_name}}" name="txtname" placeholder="Your Name" >
-                                                               
+                                <input type="text" required class="form-control border-1 p-2" value="{{user.rg_name}}"
+                                    name="txtname" placeholder="Your Name">
+
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" required class="form-control border-1 p-2" value="{{user.rg_email}}" name="txtemail" placeholder="Your Email">
+                                <input type="email" required class="form-control border-1 p-2" value="{{user.rg_email}}"
+                                    name="txtemail" placeholder="Your Email">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="text" required class="form-control border-1 p-2" value="{{user.rg_phone}}" name="txtphone" placeholder="Your Mobile">
+                                <input type="text" required class="form-control border-1 p-2" value="{{user.rg_phone}}"
+                                    name="txtphone" placeholder="Your Mobile">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-1" rows="3" required
-                                 name="txtdesc" placeholder="Describe your problem">{{desc}}</textarea>
+                                <textarea class="form-control border-1" rows="3" required name="txtdesc"
+                                    placeholder="Describe your problem">{{desc}}</textarea>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="date" id="date" data-target-input="nearest">
                                     <input type="date" class="form-control border-1 p-2 datetimepicker-input" required
-                                    name="txtdate" placeholder="Choose Date" data-target="#date1" data-toggle="datetimepicker1">
+                                        name="txtdate" id="dateInput" placeholder="Choose Date">
+                                    <span id="errorMessage" style="color: red; display: none; font-size: 12px;">Invalid
+                                        date format. Use
+                                        dd-mm-yyyy.</span>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="time" id="time" data-target-input="nearest">
                                     <input type="time" class="form-control border-1 p-2 datetimepicker-input" required
-                                    name="txttime" placeholder="Choose Time" data-target="#time1" data-toggle="datetimepicker1">
+                                        name="txttime" placeholder="Choose Time" data-target="#time1"
+                                        data-toggle="datetimepicker1">
                                 </div>
                             </div>
-                           
+
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-2" type="submit">Draft Appointment</button>
+                                <button class="btn btn-primary w-100 py-2" type="submit"
+                                    onclick="return myValidate()">Draft Appointment</button>
                             </div>
                         </div>
                     </form>
