@@ -1,9 +1,10 @@
 # virtualenv env  
-# .\env\Scripts\activate.ps1
+# .\env\Scripts\activate.ps1 OR Manually Select from Mouse
 # pip install flask
 # pip install flask_sqlalchemy
 # pip install gunicorn
 # pip install waitress
+# pip install pytz 
 
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -13,13 +14,16 @@ from datetime import datetime
 from waitress import serve
 import pytz
 import mail as eMail
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 
 # import secrets
 # print("your_secret_key=",secrets.token_hex(16))  # Generates a 32-character hex string
 # app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_key')
-app.secret_key = "db65336f04edb23664a676f8dc3a0e17"
+load_dotenv() # Load variables from .env file
+app.secret_key = os.getenv('SECRET_KEY')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///disease.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -121,7 +125,8 @@ def appoint(pr_id):
         
         sender = "caliberai123@gmail.com" #From
         recipients = [txtemail] # To
-        password = "ucoz pkvc cumx moak" # App Password https://myaccount.google.com/apppasswords
+        load_dotenv() # Load variables from .env file
+        password = os.getenv('PSW_KEY')
         rmsg = eMail.send_email(subject, body, sender, recipients, password)
         # return render_template('appoint.html', user='', desc = '')
         if (rmsg == 1):
