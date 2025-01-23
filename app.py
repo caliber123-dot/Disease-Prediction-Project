@@ -19,9 +19,6 @@ import os
 
 app = Flask(__name__)
 
-# import secrets
-# print("your_secret_key=",secrets.token_hex(16))  # Generates a 32-character hex string
-# app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_key')
 load_dotenv() # Load variables from .env file
 app.secret_key = os.getenv('SECRET_KEY')
 
@@ -80,12 +77,6 @@ def report():
 def demo():
    return render_template('demo.html')
 
-# @app.route('/appoint' , methods=['GET']) 
-# def appoint():
-#     # query_string = request.query_string
-#     id = request.args.get('aa')
-#     print((id))
-#     return render_template('appoint.html')
 
 @app.route('/appoint/<int:pr_id>', methods=['GET', 'POST']) 
 def appoint(pr_id):
@@ -96,11 +87,7 @@ def appoint(pr_id):
         txtdesc = request.form['txtdesc']
         txtdate = request.form.get('txtdate')
         txttime = request.form.get('txttime')
-        # print("Name: ", txtname)
-        # print("email: ", txtemail)
-        # print("phone: ", txtphone)
-        # print("desc: ", txtdesc)
-        
+                
         parsed_date = datetime.strptime(txtdate, "%Y-%m-%d")
         formatted_date = parsed_date.strftime("%d-%m-%Y")
         # print("date:::: ", formatted_date)
