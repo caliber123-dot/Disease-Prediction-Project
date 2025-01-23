@@ -1,6 +1,5 @@
 env
 .env
 instance/disease.db
-disease_predict_web_bare
 __pycache__
 prompt.txt
