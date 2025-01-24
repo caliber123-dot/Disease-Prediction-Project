@@ -16,15 +16,17 @@ import pytz
 import mail as eMail
 from dotenv import load_dotenv
 import os
+# from flask_migrate import Migrate, init, migrate, upgrade
 
 app = Flask(__name__)
 
 load_dotenv() # Load variables from .env file
 app.secret_key = os.getenv('SECRET_KEY')
-
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///disease.db"
+# Configure the PostgreSQL connection
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+# migrate = Migrate(app, db)
 
 class reg_tbl(db.Model):
     rg_id = db.Column(db.Integer, primary_key=True)
@@ -53,13 +55,19 @@ class predict_tbl(db.Model):
     # def get_psw(self) -> str:
     #     return f"{self.rg_psw}"  # Only Password
 
-# app.app_context().push()
 # Initialize the database
-with app.app_context():
-    db.create_all()
+@app.route('/init_db')
+def init_db():
+    try:
+        with app.app_context():
+            db.create_all()
+            print("Tables created!")
+            return "<h1>Tables created successfully!</h1>", 200
+    except Exception as e:
+        return f"Error creating Tables: {str(e)}", 500
 
+# Set India TimeZone >>>>>>
 india_timezone = pytz.timezone('Asia/Kolkata')
-# print(datetime.now(india_timezone))
 
 @app.route('/')
 def index():
@@ -76,7 +84,6 @@ def report():
 @app.route('/demo') # For Table Testing
 def demo():
    return render_template('demo.html')
-
 
 @app.route('/appoint/<int:pr_id>', methods=['GET', 'POST']) 
 def appoint(pr_id):
@@ -130,12 +137,11 @@ def appoint(pr_id):
         else:  
             return render_template('appoint.html', user='', desc = '')
             
-    
 @app.route('/history')
 def history():
     if 'user' in session:
         # flash(session['user'], 'success')
-        msg = session['user'] + " Prediction History:"
+        msg = session['user']
         allTodo = predict_tbl.query.filter_by(pr_rg_id=session['user_id']).order_by(desc(predict_tbl.pr_id)).all()
         return render_template('history.html', allTodo=allTodo, msg = msg )
     else:
@@ -282,7 +288,6 @@ def predict():
     return redirect(url_for('success'))
 
 if __name__ == "__main__":
-    # db.create_all() 
     # app.debug = True
     # app.run(host="0.0.0.0", port=8000)
     serve(app, host="0.0.0.0", port=8000, threads=8)
