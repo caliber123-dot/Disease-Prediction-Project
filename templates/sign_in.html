@@ -2,27 +2,22 @@
 {% block title %} Predict{% endblock title %}
 {% block body %}
 
-<!-- About Start -->
-
+<!-- Sign in Start -->
 <div class="container-xxl py-3" style="background-color: #cde8ff;">
     <div class="container">
         <div class="row text-end" >
                 <!-- <p> Logged out successfully. </p> -->
             {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-            
+            {% if messages %}            
                 {% for category, message in messages %}
                 <p class="{{ category }}">{{ message }}</p>
-                {% endfor %}
-            
+                {% endfor %}            
             {% endif %}
             {% endwith %}
-        </div>
-        
+        </div>        
         <div class="row g-5">
             <div class="col-lg-6 wow1 fadeIn1" data-wow-delay="0.5s"
                 style="background-image: url('static/img/signup-bg.jpg');background-size: cover;min-height: 200px;">
-
             </div>
             <div class="col-lg-6 wow fadeIn bg-light" data-wow-delay="0.5s">
                 <form action="/sign_in" method="POST">
@@ -66,7 +61,7 @@
         </div>
     </div>
 </div>
-<!-- About End -->
+<!-- Sign in End -->
 
 {% if msg %}
 <div class="container text-center" style="display: block;">
